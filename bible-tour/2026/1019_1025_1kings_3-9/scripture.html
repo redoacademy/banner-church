@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本週讀經完整經文彙整｜列王紀上 3～9 章 ＆ 箴言默想</title>
+  <style>
+:root {
+  --bg-primary: #070d16;
+  --bg-card: #0e1826;
+  --bg-card-hover: #132034;
+  --bg-input: #0a121e;
+  --border-color: rgba(212, 175, 55, 0.22);
+  --border-subtle: #1c2b42;
+  --gold-primary: #d4af37;
+  --gold-light: #f5d77f;
+  --gold-dark: #aa8620;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --accent-cyan: #38bdf8;
+  --accent-emerald: #34d399;
+  --accent-purple: #c084fc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.7;
+  padding: 24px 16px 80px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 32px 20px;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(14, 24, 38, 0.8) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.badge-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.badge-cyan {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-emerald {
+  background: rgba(52, 211, 153, 0.12);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+h1 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-btn-primary {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+  color: #070d16;
+  border: none;
+}
+
+.nav-btn-primary:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.nav-btn-secondary {
+  background: var(--bg-card);
+  color: var(--gold-light);
+  border: 1px solid var(--border-color);
+}
+
+.nav-btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-primary);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.card-title .icon {
+  font-size: 20px;
+}
+
+.copy-container {
+  margin-top: 14px;
+}
+
+.copy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.copy-label {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-light);
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-copy:hover {
+  background: var(--gold-primary);
+  color: #070d16;
+}
+
+.copy-box {
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 16px;
+  color: #e2e8f0;
+  font-size: 14.5px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: text;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--border-subtle);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timeline-date {
+  min-width: 95px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  padding-top: 2px;
+}
+
+.timeline-body h4 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.timeline-body p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.tag-proverb {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(192, 132, 252, 0.12);
+  color: var(--accent-purple);
+  margin-top: 6px;
+}
+
+.highlight-box {
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 4px solid var(--gold-primary);
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+  font-size: 14.5px;
+}
+
+.quote-verse {
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.verse-item {
+  display: flex;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.verse-num {
+  min-width: 32px;
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 13px;
+  text-align: right;
+  padding-top: 1px;
+}
+
+.verse-text {
+  color: #e2e8f0;
+  flex: 1;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--gold-primary);
+  color: #070d16;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: 9999;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  background: rgba(14, 24, 38, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nav-chip {
+  padding: 6px 12px;
+  background: var(--bg-primary);
+  color: var(--text-muted);
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.2s;
+}
+
+.nav-chip:hover, .nav-chip.active {
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--gold-light);
+  border-color: var(--gold-primary);
+}
+
+@media (max-width: 600px) {
+  body { padding: 16px 12px 60px; }
+  h1 { font-size: 22px; }
+  .card { padding: 18px 14px; }
+  .timeline-item { flex-direction: column; gap: 4px; }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-row">
+        <span class="badge badge-gold">✦ 聖經旅行團・三年讀經之旅</span>
+        <span class="badge badge-cyan">2026/10/19 ～ 2026/10/25 進度</span>
+        <span class="badge badge-emerald">和合本完整經文（共 263 節）</span>
+      </div>
+      <h1>列王紀上 3～9 章 ＆ 每日箴言經文全錄</h1>
+      <p class="subtitle">所羅門王朝盛世、求智慧、建殿與神二次顯現・手機閱讀極致優化版</p>
+
+      <div class="nav-links">
+        <a href="index.html" class="nav-btn nav-btn-primary">💡 返回小組分享指引與講稿</a>
+      </div>
+    </header>
+
+    <!-- 頂部快速跳轉導覽列 -->
+    <nav class="sticky-nav">
+      <span style="color:var(--gold-primary);font-weight:700;font-size:13px;align-self:center;margin-right:4px;">章節跳轉：</span>
+      <a href="#chap-3" class="nav-chip">第 3 章 (智慧)</a>
+      <a href="#chap-4" class="nav-chip">第 4 章 (治理)</a>
+      <a href="#chap-5" class="nav-chip">第 5 章 (預備)</a>
+      <a href="#chap-6" class="nav-chip">第 6 章 (建殿)</a>
+      <a href="#chap-7" class="nav-chip">第 7 章 (器具)</a>
+      <a href="#chap-8" class="nav-chip">第 8 章 (獻殿)</a>
+      <a href="#chap-9" class="nav-chip">第 9 章 (立約)</a>
+      <a href="#chap-proverbs" class="nav-chip" style="color:var(--accent-purple);border-color:rgba(192,132,252,0.4);">💎 箴言默想</a>
+    </nav>
+
+    <!-- 經文主體 -->
+    
+    <section class="card" id="chap-3">
+      <div class="card-title">
+        <span class="icon">📜</span>
+        <span>列王紀上 第 3 章｜所羅門求智慧與兩妓爭子</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <span class="badge badge-cyan">10/19 (一) 進度</span>
+        <span class="badge badge-gold">共 28 節經文</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:6px;margin-bottom:16px;">
+        💡 <strong>章節導讀：</strong>所羅門夜間在基遍獻祭，神向他顯現。所羅門單求聽訟的智慧以治理眾民，神大喜悅，賜他極大智慧，並加添富足尊榮。隨後以「分孩子」之審判顯出神賜之卓越智慧。
+      </p>
+
+      <div class="copy-container" style="margin-bottom:18px;">
+        <div class="copy-header">
+          <span class="copy-label">本章經文全文（和合本）</span>
+          <button class="btn-copy" onclick="copyText('chap-raw-3', this)">📋 複製本章全部經文</button>
+        </div>
+      </div>
+
+      <div style="padding:4px 0;">
+        <div class="verse-item"><span class="verse-num">1</span><span class="verse-text">所羅門與埃及王法老結親，娶了法老的女兒為妻，接他進入大衛城，直等到造完了自己的宮和耶和華的殿，並耶路撒冷周圍的城牆。</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">當那些日子，百姓仍在邱壇獻祭，因為還沒有為耶和華的名建殿。</span></div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">所羅門愛耶和華，遵行他父親大衛的律例，只是還在邱壇獻祭燒香。</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">所羅門王上基遍去獻祭；因為在那裡有極大(或作出名)的邱壇，他在那壇上獻一千犧牲作燔祭。</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">在基遍，夜間夢中，耶和華向所羅門顯現，對他說：你願我賜你甚麼？你可以求。</span></div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">所羅門說：你僕人─我父親大衛用誠實、公義、正直的心行在你面前，你就向他大施恩典，又為他存留大恩，賜他一個兒子坐在他的位上，正如今日一樣。</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">耶和華─我的神啊，如今你使僕人接續我父親大衛作王；但我是幼童，不知道應當怎樣出入。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">僕人住在你所揀選的民中，這民多得不可勝數。</span></div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">所以求你賜我智慧，可以判斷你的民，能辨別是非。不然，誰能判斷這眾多的民呢？</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">所羅門因為求這事，就蒙主喜悅。</span></div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">神對他說：你既然求這事，不為自己求壽、求富，也不求滅絕你仇敵的性命，單求智慧可以聽訟，</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">我就應允你所求的，賜你聰明智慧，甚至在你以前沒有像你的，在你以後也沒有像你的。</span></div><div class="verse-item"><span class="verse-num">13</span><span class="verse-text">你所沒有求的，我也賜給你，就是富足、尊榮，使你在世的日子，列王中沒有一個能比你的。</span></div><div class="verse-item"><span class="verse-num">14</span><span class="verse-text">你若效法你父親大衛，遵行我的道，謹守我的律例、誡命，我必使你長壽。</span></div><div class="verse-item"><span class="verse-num">15</span><span class="verse-text">所羅門醒了，不料是個夢。他就回到耶路撒冷，站在耶和華的約櫃前，獻燔祭和平安祭，又為他眾臣僕設擺筵席。</span></div><div class="verse-item"><span class="verse-num">16</span><span class="verse-text">一日，有兩個妓女來，站在王面前。</span></div><div class="verse-item"><span class="verse-num">17</span><span class="verse-text">一個說：我主啊，我和這婦人同住一房；他在房中的時候，我生了一個男孩。</span></div><div class="verse-item"><span class="verse-num">18</span><span class="verse-text">我生孩子後第三日，這婦人也生了孩子。我們是同住的，除了我們二人之外，房中再沒有別人。</span></div><div class="verse-item"><span class="verse-num">19</span><span class="verse-text">夜間，這婦人睡著的時候，壓死了他的孩子。</span></div><div class="verse-item"><span class="verse-num">20</span><span class="verse-text">他半夜起來，趁我睡著，從我旁邊把我的孩子抱去，放在他懷裡，將他的死孩子放在我懷裡。</span></div><div class="verse-item"><span class="verse-num">21</span><span class="verse-text">天要亮的時候，我起來要給我的孩子吃奶，不料，孩子死了；及至天亮，我細細地察看，不是我所生的孩子。</span></div><div class="verse-item"><span class="verse-num">22</span><span class="verse-text">那婦人說：不然，活孩子是我的，死孩子是你的。這婦人說：不然，死孩子是你的，活孩子是我的。他們在王面前如此爭論。</span></div><div class="verse-item"><span class="verse-num">23</span><span class="verse-text">王說：這婦人說活孩子是我的，死孩子是你的，那婦人說不然，死孩子是你的，活孩子是我的，</span></div><div class="verse-item"><span class="verse-num">24</span><span class="verse-text">就吩咐說：拿刀來！人就拿刀來。</span></div><div class="verse-item"><span class="verse-num">25</span><span class="verse-text">王說：將活孩子劈成兩半，一半給那婦人，一半給這婦人。</span></div><div class="verse-item"><span class="verse-num">26</span><span class="verse-text">活孩子的母親為自己的孩子心裡急痛，就說：求我主將活孩子給那婦人罷，萬不可殺他！那婦人說：這孩子也不歸我，也不歸你，把他劈了罷！</span></div><div class="verse-item"><span class="verse-num">27</span><span class="verse-text">王說：將活孩子給這婦人，萬不可殺他；這婦人實在是他的母親。</span></div><div class="verse-item"><span class="verse-num">28</span><span class="verse-text">以色列眾人聽見王這樣判斷，就都敬畏他；因為見他心裡有神的智慧，能以斷案。</span></div>
+      </div>
+
+      <div id="chap-raw-3" style="display:none;">3:1 所羅門與埃及王法老結親，娶了法老的女兒為妻，接他進入大衛城，直等到造完了自己的宮和耶和華的殿，並耶路撒冷周圍的城牆。\n3:2 當那些日子，百姓仍在邱壇獻祭，因為還沒有為耶和華的名建殿。\n3:3 所羅門愛耶和華，遵行他父親大衛的律例，只是還在邱壇獻祭燒香。\n3:4 所羅門王上基遍去獻祭；因為在那裡有極大(或作出名)的邱壇，他在那壇上獻一千犧牲作燔祭。\n3:5 在基遍，夜間夢中，耶和華向所羅門顯現，對他說：你願我賜你甚麼？你可以求。\n3:6 所羅門說：你僕人─我父親大衛用誠實、公義、正直的心行在你面前，你就向他大施恩典，又為他存留大恩，賜他一個兒子坐在他的位上，正如今日一樣。\n3:7 耶和華─我的神啊，如今你使僕人接續我父親大衛作王；但我是幼童，不知道應當怎樣出入。\n3:8 僕人住在你所揀選的民中，這民多得不可勝數。\n3:9 所以求你賜我智慧，可以判斷你的民，能辨別是非。不然，誰能判斷這眾多的民呢？\n3:10 所羅門因為求這事，就蒙主喜悅。\n3:11 神對他說：你既然求這事，不為自己求壽、求富，也不求滅絕你仇敵的性命，單求智慧可以聽訟，\n3:12 我就應允你所求的，賜你聰明智慧，甚至在你以前沒有像你的，在你以後也沒有像你的。\n3:13 你所沒有求的，我也賜給你，就是富足、尊榮，使你在世的日子，列王中沒有一個能比你的。\n3:14 你若效法你父親大衛，遵行我的道，謹守我的律例、誡命，我必使你長壽。\n3:15 所羅門醒了，不料是個夢。他就回到耶路撒冷，站在耶和華的約櫃前，獻燔祭和平安祭，又為他眾臣僕設擺筵席。\n3:16 一日，有兩個妓女來，站在王面前。\n3:17 一個說：我主啊，我和這婦人同住一房；他在房中的時候，我生了一個男孩。\n3:18 我生孩子後第三日，這婦人也生了孩子。我們是同住的，除了我們二人之外，房中再沒有別人。\n3:19 夜間，這婦人睡著的時候，壓死了他的孩子。\n3:20 他半夜起來，趁我睡著，從我旁邊把我的孩子抱去，放在他懷裡，將他的死孩子放在我懷裡。\n3:21 天要亮的時候，我起來要給我的孩子吃奶，不料，孩子死了；及至天亮，我細細地察看，不是我所生的孩子。\n3:22 那婦人說：不然，活孩子是我的，死孩子是你的。這婦人說：不然，死孩子是你的，活孩子是我的。他們在王面前如此爭論。\n3:23 王說：這婦人說活孩子是我的，死孩子是你的，那婦人說不然，死孩子是你的，活孩子是我的，\n3:24 就吩咐說：拿刀來！人就拿刀來。\n3:25 王說：將活孩子劈成兩半，一半給那婦人，一半給這婦人。\n3:26 活孩子的母親為自己的孩子心裡急痛，就說：求我主將活孩子給那婦人罷，萬不可殺他！那婦人說：這孩子也不歸我，也不歸你，把他劈了罷！\n3:27 王說：將活孩子給這婦人，萬不可殺他；這婦人實在是他的母親。\n3:28 以色列眾人聽見王這樣判斷，就都敬畏他；因為見他心裡有神的智慧，能以斷案。</div>
+    </section>
+    
+    <section class="card" id="chap-4">
+      <div class="card-title">
+        <span class="icon">📜</span>
+        <span>列王紀上 第 4 章｜所羅門的官吏盛世與博學智慧</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <span class="badge badge-cyan">10/20 (二) 進度</span>
+        <span class="badge badge-gold">共 34 節經文</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:6px;margin-bottom:16px;">
+        💡 <strong>章節導讀：</strong>記載所羅門的十二官吏與國政組織，國境廣闊，百姓安居樂業在葡萄樹與無花果樹下。所羅門作箴言三千句、詩歌一千零五首，天下各國君王都差人來聽其智慧。
+      </p>
+
+      <div class="copy-container" style="margin-bottom:18px;">
+        <div class="copy-header">
+          <span class="copy-label">本章經文全文（和合本）</span>
+          <button class="btn-copy" onclick="copyText('chap-raw-4', this)">📋 複製本章全部經文</button>
+        </div>
+      </div>
+
+      <div style="padding:4px 0;">
+        <div class="verse-item"><span class="verse-num">1</span><span class="verse-text">所羅門作以色列眾人的王。</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">他的臣子記在下面：撒督的兒子亞撒利雅作祭司，</span></div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">示沙的兩個兒子以利何烈、亞希亞作書記，亞希律的兒子約沙法作史官，</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">耶何耶大的兒子比拿雅作元帥，撒督和亞比亞他作祭司長，</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">拿單的兒子亞撒利雅作眾吏長，王的朋友拿單的兒子撒布得作領袖，</span></div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">亞希煞作家宰，亞比大的兒子亞多尼蘭掌管服苦的人。</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">所羅門在以色列全地立了十二個官吏，使他們供給王和王家的食物，每年各人供給一月。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">他們的名字記在下面：在以法蓮山地有便戶珥；</span></div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">在瑪迦斯、沙賓、伯示麥、以倫伯哈南有便底甲；</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">在亞魯泊有便希悉，他管理梭哥和希弗全地；</span></div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">在多珥山岡(或作全境)有便亞比拿達，他娶了所羅門的女兒他法為妻；</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">在他納和米吉多，並靠近撒拉他拿、耶斯列下邊的伯善全地，從伯善到亞伯米何拉直到約念之外，有亞希律的兒子巴拿；</span></div><div class="verse-item"><span class="verse-num">13</span><span class="verse-text">在基列的拉末有便基別，他管理在基列的瑪拿西子孫睚珥的城邑，巴珊的亞珥歌伯地的大城六十座，都有城牆和銅閂；</span></div><div class="verse-item"><span class="verse-num">14</span><span class="verse-text">在瑪哈念有易多的兒子亞希拿達；</span></div><div class="verse-item"><span class="verse-num">15</span><span class="verse-text">在拿弗他利有亞希瑪斯，他也娶了所羅門的一個女兒巴實抹為妻；</span></div><div class="verse-item"><span class="verse-num">16</span><span class="verse-text">在亞設和亞祿有戶篩的兒子巴拿；</span></div><div class="verse-item"><span class="verse-num">17</span><span class="verse-text">在以薩迦有帕路亞的兒子約沙法；</span></div><div class="verse-item"><span class="verse-num">18</span><span class="verse-text">在便雅憫有以拉的兒子示每；</span></div><div class="verse-item"><span class="verse-num">19</span><span class="verse-text">在基列地，就是從前屬亞摩利王西宏和巴珊王噩之地，有烏利的兒子基別一人管理。</span></div><div class="verse-item"><span class="verse-num">20</span><span class="verse-text">猶大人和以色列人如同海邊的沙那樣多，都吃喝快樂。</span></div><div class="verse-item"><span class="verse-num">21</span><span class="verse-text">所羅門統管諸國，從大河到非利士地，直到埃及的邊界。所羅門在世的日子，這些國都進貢服事他。</span></div><div class="verse-item"><span class="verse-num">22</span><span class="verse-text">所羅門每日所用的食物：細麵三十歌珥，粗麵六十歌珥，</span></div><div class="verse-item"><span class="verse-num">23</span><span class="verse-text">肥牛十隻，草場的牛二十隻，羊一百隻，還有鹿、羚羊、麃子，並肥禽。</span></div><div class="verse-item"><span class="verse-num">24</span><span class="verse-text">所羅門管理大河西邊的諸王，以及從提弗薩直到迦薩的全地，四境盡都平安。</span></div><div class="verse-item"><span class="verse-num">25</span><span class="verse-text">所羅門在世的日子，從但到別是巴的猶大人和以色列人都在自己的葡萄樹下和無花果樹下安然居住。</span></div><div class="verse-item"><span class="verse-num">26</span><span class="verse-text">所羅門有套車的馬四萬，還有馬兵一萬二千。</span></div><div class="verse-item"><span class="verse-num">27</span><span class="verse-text">那十二個官吏各按各月供給所羅門王，並一切與他同席之人的食物，一無所缺。</span></div><div class="verse-item"><span class="verse-num">28</span><span class="verse-text">眾人各按各分，將養馬與快馬的大麥和乾草送到官吏那裡。</span></div><div class="verse-item"><span class="verse-num">29</span><span class="verse-text">神賜給所羅門極大的智慧聰明和廣大的心，如同海沙不可測量。</span></div><div class="verse-item"><span class="verse-num">30</span><span class="verse-text">所羅門的智慧超過東方人和埃及人的一切智慧。</span></div><div class="verse-item"><span class="verse-num">31</span><span class="verse-text">他的智慧勝過萬人，勝過以斯拉人以探，並瑪曷的兒子希幔、甲各、達大的智慧。他的名聲傳揚在四圍的列國。</span></div><div class="verse-item"><span class="verse-num">32</span><span class="verse-text">他作箴言三千句，詩歌一千零五首。</span></div><div class="verse-item"><span class="verse-num">33</span><span class="verse-text">他講論草木，自利巴嫩的香柏樹直到牆上長的牛膝草，又講論飛禽走獸、昆蟲水族。</span></div><div class="verse-item"><span class="verse-num">34</span><span class="verse-text">天下列王聽見所羅門的智慧，就都差人來聽他的智慧話。</span></div>
+      </div>
+
+      <div id="chap-raw-4" style="display:none;">4:1 所羅門作以色列眾人的王。\n4:2 他的臣子記在下面：撒督的兒子亞撒利雅作祭司，\n4:3 示沙的兩個兒子以利何烈、亞希亞作書記，亞希律的兒子約沙法作史官，\n4:4 耶何耶大的兒子比拿雅作元帥，撒督和亞比亞他作祭司長，\n4:5 拿單的兒子亞撒利雅作眾吏長，王的朋友拿單的兒子撒布得作領袖，\n4:6 亞希煞作家宰，亞比大的兒子亞多尼蘭掌管服苦的人。\n4:7 所羅門在以色列全地立了十二個官吏，使他們供給王和王家的食物，每年各人供給一月。\n4:8 他們的名字記在下面：在以法蓮山地有便戶珥；\n4:9 在瑪迦斯、沙賓、伯示麥、以倫伯哈南有便底甲；\n4:10 在亞魯泊有便希悉，他管理梭哥和希弗全地；\n4:11 在多珥山岡(或作全境)有便亞比拿達，他娶了所羅門的女兒他法為妻；\n4:12 在他納和米吉多，並靠近撒拉他拿、耶斯列下邊的伯善全地，從伯善到亞伯米何拉直到約念之外，有亞希律的兒子巴拿；\n4:13 在基列的拉末有便基別，他管理在基列的瑪拿西子孫睚珥的城邑，巴珊的亞珥歌伯地的大城六十座，都有城牆和銅閂；\n4:14 在瑪哈念有易多的兒子亞希拿達；\n4:15 在拿弗他利有亞希瑪斯，他也娶了所羅門的一個女兒巴實抹為妻；\n4:16 在亞設和亞祿有戶篩的兒子巴拿；\n4:17 在以薩迦有帕路亞的兒子約沙法；\n4:18 在便雅憫有以拉的兒子示每；\n4:19 在基列地，就是從前屬亞摩利王西宏和巴珊王噩之地，有烏利的兒子基別一人管理。\n4:20 猶大人和以色列人如同海邊的沙那樣多，都吃喝快樂。\n4:21 所羅門統管諸國，從大河到非利士地，直到埃及的邊界。所羅門在世的日子，這些國都進貢服事他。\n4:22 所羅門每日所用的食物：細麵三十歌珥，粗麵六十歌珥，\n4:23 肥牛十隻，草場的牛二十隻，羊一百隻，還有鹿、羚羊、麃子，並肥禽。\n4:24 所羅門管理大河西邊的諸王，以及從提弗薩直到迦薩的全地，四境盡都平安。\n4:25 所羅門在世的日子，從但到別是巴的猶大人和以色列人都在自己的葡萄樹下和無花果樹下安然居住。\n4:26 所羅門有套車的馬四萬，還有馬兵一萬二千。\n4:27 那十二個官吏各按各月供給所羅門王，並一切與他同席之人的食物，一無所缺。\n4:28 眾人各按各分，將養馬與快馬的大麥和乾草送到官吏那裡。\n4:29 神賜給所羅門極大的智慧聰明和廣大的心，如同海沙不可測量。\n4:30 所羅門的智慧超過東方人和埃及人的一切智慧。\n4:31 他的智慧勝過萬人，勝過以斯拉人以探，並瑪曷的兒子希幔、甲各、達大的智慧。他的名聲傳揚在四圍的列國。\n4:32 他作箴言三千句，詩歌一千零五首。\n4:33 他講論草木，自利巴嫩的香柏樹直到牆上長的牛膝草，又講論飛禽走獸、昆蟲水族。\n4:34 天下列王聽見所羅門的智慧，就都差人來聽他的智慧話。</div>
+    </section>
+    
+    <section class="card" id="chap-5">
+      <div class="card-title">
+        <span class="icon">📜</span>
+        <span>列王紀上 第 5 章｜與推羅王希蘭立約預備建殿</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <span class="badge badge-cyan">10/21 (三) 進度</span>
+        <span class="badge badge-gold">共 18 節經文</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:6px;margin-bottom:16px;">
+        💡 <strong>章節導讀：</strong>推羅王希蘭與所羅門定立和平之約，提供黎巴嫩的香柏木與松木，所羅門以食物油品回贈。動員數萬苦力與石匠在山中採鑿修整巨石，預備建造耶和華聖殿的根基。
+      </p>
+
+      <div class="copy-container" style="margin-bottom:18px;">
+        <div class="copy-header">
+          <span class="copy-label">本章經文全文（和合本）</span>
+          <button class="btn-copy" onclick="copyText('chap-raw-5', this)">📋 複製本章全部經文</button>
+        </div>
+      </div>
+
+      <div style="padding:4px 0;">
+        <div class="verse-item"><span class="verse-num">1</span><span class="verse-text">推羅王希蘭，平素愛大衛；他聽見以色列人膏所羅門，接續他父親作王，就差遣臣僕來見他。</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">所羅門也差遣人去見希蘭，說：</span></div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">你知道我父親大衛因四圍的爭戰，不能為耶和華─他神的名建殿，直等到耶和華使仇敵都服在他腳下。</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">現在耶和華─我的神使我四圍平安，沒有仇敵，沒有災禍。</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">我定意要為耶和華─我神的名建殿，是照耶和華應許我父親大衛的話說：我必使你兒子接續你坐你的位，他必為我的名建殿。</span></div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">所以求你吩咐你的僕人在利巴嫩為我砍伐香柏木，我的僕人也必幫助他們，我必照你所定的，給你僕人的工價；因為你知道，在我們中間沒有人像西頓人善於砍伐樹木。</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">希蘭聽見所羅門的話，就甚喜悅，說：今日應當稱頌耶和華；因他賜給大衛一個有智慧的兒子，治理這眾多的民。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">希蘭打發人去見所羅門，說：你差遣人向我所提的那事，我都聽見了；論到香柏木和松木，我必照你的心願而行。</span></div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">我的僕人必將這木料從利巴嫩運到海裡，紮成筏子，浮海運到你所指定我的地方，在那裡拆開，你就可以收取；你也要成全我的心願，將食物給我的家。</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">於是希蘭照著所羅門所要的，給他香柏木和松木；</span></div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">所羅門給希蘭麥子二萬歌珥，清油二十歌珥，作他家的食物。所羅門每年都是這樣給希蘭。</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">耶和華照著所應許的賜智慧給所羅門。希蘭與所羅門和好，彼此立約。</span></div><div class="verse-item"><span class="verse-num">13</span><span class="verse-text">所羅門王從以色列人中挑取服苦的人共有三萬，</span></div><div class="verse-item"><span class="verse-num">14</span><span class="verse-text">派他們輪流每月一萬人上利巴嫩去；一個月在利巴嫩，兩個月在家裡。亞多尼蘭掌管他們。</span></div><div class="verse-item"><span class="verse-num">15</span><span class="verse-text">所羅門用七萬扛抬的，八萬在山上鑿石頭的。</span></div><div class="verse-item"><span class="verse-num">16</span><span class="verse-text">此外，所羅門用三千三百督工的，監管工人。</span></div><div class="verse-item"><span class="verse-num">17</span><span class="verse-text">王下令，人就鑿出又大又寶貴的石頭來，用以立殿的根基。</span></div><div class="verse-item"><span class="verse-num">18</span><span class="verse-text">所羅門的匠人和希蘭的匠人，並迦巴勒人，都將石頭鑿好，預備木料和石頭建殿。</span></div>
+      </div>
+
+      <div id="chap-raw-5" style="display:none;">5:1 推羅王希蘭，平素愛大衛；他聽見以色列人膏所羅門，接續他父親作王，就差遣臣僕來見他。\n5:2 所羅門也差遣人去見希蘭，說：\n5:3 你知道我父親大衛因四圍的爭戰，不能為耶和華─他神的名建殿，直等到耶和華使仇敵都服在他腳下。\n5:4 現在耶和華─我的神使我四圍平安，沒有仇敵，沒有災禍。\n5:5 我定意要為耶和華─我神的名建殿，是照耶和華應許我父親大衛的話說：我必使你兒子接續你坐你的位，他必為我的名建殿。\n5:6 所以求你吩咐你的僕人在利巴嫩為我砍伐香柏木，我的僕人也必幫助他們，我必照你所定的，給你僕人的工價；因為你知道，在我們中間沒有人像西頓人善於砍伐樹木。\n5:7 希蘭聽見所羅門的話，就甚喜悅，說：今日應當稱頌耶和華；因他賜給大衛一個有智慧的兒子，治理這眾多的民。\n5:8 希蘭打發人去見所羅門，說：你差遣人向我所提的那事，我都聽見了；論到香柏木和松木，我必照你的心願而行。\n5:9 我的僕人必將這木料從利巴嫩運到海裡，紮成筏子，浮海運到你所指定我的地方，在那裡拆開，你就可以收取；你也要成全我的心願，將食物給我的家。\n5:10 於是希蘭照著所羅門所要的，給他香柏木和松木；\n5:11 所羅門給希蘭麥子二萬歌珥，清油二十歌珥，作他家的食物。所羅門每年都是這樣給希蘭。\n5:12 耶和華照著所應許的賜智慧給所羅門。希蘭與所羅門和好，彼此立約。\n5:13 所羅門王從以色列人中挑取服苦的人共有三萬，\n5:14 派他們輪流每月一萬人上利巴嫩去；一個月在利巴嫩，兩個月在家裡。亞多尼蘭掌管他們。\n5:15 所羅門用七萬扛抬的，八萬在山上鑿石頭的。\n5:16 此外，所羅門用三千三百督工的，監管工人。\n5:17 王下令，人就鑿出又大又寶貴的石頭來，用以立殿的根基。\n5:18 所羅門的匠人和希蘭的匠人，並迦巴勒人，都將石頭鑿好，預備木料和石頭建殿。</div>
+    </section>
+    
+    <section class="card" id="chap-6">
+      <div class="card-title">
+        <span class="icon">📜</span>
+        <span>列王紀上 第 6 章｜聖殿的興工建造與神重申應許</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <span class="badge badge-cyan">10/22 (四) 進度</span>
+        <span class="badge badge-gold">共 38 節經文</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:6px;margin-bottom:16px;">
+        💡 <strong>章節導讀：</strong>出埃及後 480 年開工建殿，詳細記載聖殿尺寸、至聖所、精金包裹與基路伯雕飾。建殿時聽不見鐵器槌斧之聲。建造中神親自應許：只要遵行律例，神必常住以色列中間。
+      </p>
+
+      <div class="copy-container" style="margin-bottom:18px;">
+        <div class="copy-header">
+          <span class="copy-label">本章經文全文（和合本）</span>
+          <button class="btn-copy" onclick="copyText('chap-raw-6', this)">📋 複製本章全部經文</button>
+        </div>
+      </div>
+
+      <div style="padding:4px 0;">
+        <div class="verse-item"><span class="verse-num">1</span><span class="verse-text">以色列人出埃及地後四百八十年，所羅門作以色列王第四年西弗月，就是二月，開工建造耶和華的殿。</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">所羅門王為耶和華所建的殿，長六十肘，寬二十肘，高三十肘。</span></div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">殿前的廊子長二十肘，與殿的寬窄一樣，闊十肘；</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">又為殿做了嚴緊的窗櫺。</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">靠著殿牆，圍著外殿內殿，造了三層旁屋；</span></div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">下層寬五肘，中層寬六肘，上層寬七肘。殿外旁屋的梁木擱在殿牆坎上，免得插入殿牆。</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">建殿是用山中鑿成的石頭。建殿的時候，鎚子、斧子，和別樣鐵器的響聲都沒有聽見。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">在殿右邊當中的旁屋有門，門內有旋螺的樓梯，可以上到第二層，從第二層可以上到第三層。</span></div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">所羅門建殿，安置香柏木的棟梁，又用香柏木板遮蓋。</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">靠著殿所造的旁屋，每層高五肘，香柏木的棟梁擱在殿牆坎上。</span></div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">耶和華的話臨到所羅門說：</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">論到你所建的這殿，你若遵行我的律例，謹守我的典章，遵從我的一切誡命，我必向你應驗我所應許你父親大衛的話。</span></div><div class="verse-item"><span class="verse-num">13</span><span class="verse-text">我必住在以色列人中間，並不丟棄我民以色列。</span></div><div class="verse-item"><span class="verse-num">14</span><span class="verse-text">所羅門建造殿宇。</span></div><div class="verse-item"><span class="verse-num">15</span><span class="verse-text">殿裡面用香柏木板貼牆，從地到棚頂都用木板遮蔽，又用松木板鋪地。</span></div><div class="verse-item"><span class="verse-num">16</span><span class="verse-text">內殿，就是至聖所，長二十肘，從地到棚頂用香柏木板遮蔽(或作隔斷)。</span></div><div class="verse-item"><span class="verse-num">17</span><span class="verse-text">內殿前的外殿，長四十肘。</span></div><div class="verse-item"><span class="verse-num">18</span><span class="verse-text">殿裡一點石頭都不顯露，一概用香柏木遮蔽；上面刻著野瓜和初開的花。</span></div><div class="verse-item"><span class="verse-num">19</span><span class="verse-text">殿裡預備了內殿，好安放耶和華的約櫃。</span></div><div class="verse-item"><span class="verse-num">20</span><span class="verse-text">內殿長二十肘，寬二十肘，高二十肘，牆面都貼上精金；又用香柏木做壇，包上精金。</span></div><div class="verse-item"><span class="verse-num">21</span><span class="verse-text">所羅門用精金貼了殿內的牆，又用金鍊子掛在內殿前門扇，用金包裹。</span></div><div class="verse-item"><span class="verse-num">22</span><span class="verse-text">全殿都貼上金子，直到貼完；內殿前的壇，也都用金包裹。</span></div><div class="verse-item"><span class="verse-num">23</span><span class="verse-text">他用橄欖木做兩個基路伯，各高十肘，安在內殿。</span></div><div class="verse-item"><span class="verse-num">24</span><span class="verse-text">這一個基路伯有兩個翅膀，各長五肘，從這翅膀尖到那翅膀尖共有十肘；</span></div><div class="verse-item"><span class="verse-num">25</span><span class="verse-text">那一個基路伯的兩個翅膀也是十肘，兩個基路伯的尺寸、形像都是一樣。</span></div><div class="verse-item"><span class="verse-num">26</span><span class="verse-text">這基路伯高十肘，那基路伯也是如此。</span></div><div class="verse-item"><span class="verse-num">27</span><span class="verse-text">他將兩個基路伯安在內殿裡；基路伯的翅膀是張開的，這基路伯的一個翅膀挨著這邊的牆，那基路伯的一個翅膀挨著那邊的牆，裡邊的兩個翅膀在殿中間彼此相接；</span></div><div class="verse-item"><span class="verse-num">28</span><span class="verse-text">又用金子包裹二基路伯。</span></div><div class="verse-item"><span class="verse-num">29</span><span class="verse-text">內殿、外殿周圍的牆上都刻著基路伯、棕樹，和初開的花。</span></div><div class="verse-item"><span class="verse-num">30</span><span class="verse-text">內殿、外殿的地板都貼上金子。</span></div><div class="verse-item"><span class="verse-num">31</span><span class="verse-text">又用橄欖木製造內殿的門扇、門楣、門框；門口有牆的五分之一。</span></div><div class="verse-item"><span class="verse-num">32</span><span class="verse-text">在橄欖木做的兩門扇上刻著基路伯、棕樹，和初開的花，都貼上金子。</span></div><div class="verse-item"><span class="verse-num">33</span><span class="verse-text">又用橄欖木製造外殿的門框，門口有牆的四分之一。</span></div><div class="verse-item"><span class="verse-num">34</span><span class="verse-text">用松木做門兩扇。這扇分兩扇，是摺疊的；那扇分兩扇；也是摺疊的。</span></div><div class="verse-item"><span class="verse-num">35</span><span class="verse-text">上面刻著基路伯、棕樹，和初開的花，都用金子貼了。</span></div><div class="verse-item"><span class="verse-num">36</span><span class="verse-text">他又用鑿成的石頭三層、香柏木一層建築內院。</span></div><div class="verse-item"><span class="verse-num">37</span><span class="verse-text">所羅門在位第四年西弗月，立了耶和華殿的根基。</span></div><div class="verse-item"><span class="verse-num">38</span><span class="verse-text">到十一年布勒月，就是八月，殿和一切屬殿的都按著樣式造成。他建殿的工夫共有七年。</span></div>
+      </div>
+
+      <div id="chap-raw-6" style="display:none;">6:1 以色列人出埃及地後四百八十年，所羅門作以色列王第四年西弗月，就是二月，開工建造耶和華的殿。\n6:2 所羅門王為耶和華所建的殿，長六十肘，寬二十肘，高三十肘。\n6:3 殿前的廊子長二十肘，與殿的寬窄一樣，闊十肘；\n6:4 又為殿做了嚴緊的窗櫺。\n6:5 靠著殿牆，圍著外殿內殿，造了三層旁屋；\n6:6 下層寬五肘，中層寬六肘，上層寬七肘。殿外旁屋的梁木擱在殿牆坎上，免得插入殿牆。\n6:7 建殿是用山中鑿成的石頭。建殿的時候，鎚子、斧子，和別樣鐵器的響聲都沒有聽見。\n6:8 在殿右邊當中的旁屋有門，門內有旋螺的樓梯，可以上到第二層，從第二層可以上到第三層。\n6:9 所羅門建殿，安置香柏木的棟梁，又用香柏木板遮蓋。\n6:10 靠著殿所造的旁屋，每層高五肘，香柏木的棟梁擱在殿牆坎上。\n6:11 耶和華的話臨到所羅門說：\n6:12 論到你所建的這殿，你若遵行我的律例，謹守我的典章，遵從我的一切誡命，我必向你應驗我所應許你父親大衛的話。\n6:13 我必住在以色列人中間，並不丟棄我民以色列。\n6:14 所羅門建造殿宇。\n6:15 殿裡面用香柏木板貼牆，從地到棚頂都用木板遮蔽，又用松木板鋪地。\n6:16 內殿，就是至聖所，長二十肘，從地到棚頂用香柏木板遮蔽(或作隔斷)。\n6:17 內殿前的外殿，長四十肘。\n6:18 殿裡一點石頭都不顯露，一概用香柏木遮蔽；上面刻著野瓜和初開的花。\n6:19 殿裡預備了內殿，好安放耶和華的約櫃。\n6:20 內殿長二十肘，寬二十肘，高二十肘，牆面都貼上精金；又用香柏木做壇，包上精金。\n6:21 所羅門用精金貼了殿內的牆，又用金鍊子掛在內殿前門扇，用金包裹。\n6:22 全殿都貼上金子，直到貼完；內殿前的壇，也都用金包裹。\n6:23 他用橄欖木做兩個基路伯，各高十肘，安在內殿。\n6:24 這一個基路伯有兩個翅膀，各長五肘，從這翅膀尖到那翅膀尖共有十肘；\n6:25 那一個基路伯的兩個翅膀也是十肘，兩個基路伯的尺寸、形像都是一樣。\n6:26 這基路伯高十肘，那基路伯也是如此。\n6:27 他將兩個基路伯安在內殿裡；基路伯的翅膀是張開的，這基路伯的一個翅膀挨著這邊的牆，那基路伯的一個翅膀挨著那邊的牆，裡邊的兩個翅膀在殿中間彼此相接；\n6:28 又用金子包裹二基路伯。\n6:29 內殿、外殿周圍的牆上都刻著基路伯、棕樹，和初開的花。\n6:30 內殿、外殿的地板都貼上金子。\n6:31 又用橄欖木製造內殿的門扇、門楣、門框；門口有牆的五分之一。\n6:32 在橄欖木做的兩門扇上刻著基路伯、棕樹，和初開的花，都貼上金子。\n6:33 又用橄欖木製造外殿的門框，門口有牆的四分之一。\n6:34 用松木做門兩扇。這扇分兩扇，是摺疊的；那扇分兩扇；也是摺疊的。\n6:35 上面刻著基路伯、棕樹，和初開的花，都用金子貼了。\n6:36 他又用鑿成的石頭三層、香柏木一層建築內院。\n6:37 所羅門在位第四年西弗月，立了耶和華殿的根基。\n6:38 到十一年布勒月，就是八月，殿和一切屬殿的都按著樣式造成。他建殿的工夫共有七年。</div>
+    </section>
+    
+    <section class="card" id="chap-7">
+      <div class="card-title">
+        <span class="icon">📜</span>
+        <span>列王紀上 第 7 章｜王宮建造與銅匠戶蘭製造聖殿器皿</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <span class="badge badge-cyan">10/23 (五) 進度</span>
+        <span class="badge badge-gold">共 51 節經文</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:6px;margin-bottom:16px;">
+        💡 <strong>章節導讀：</strong>所羅門建王宮（13年）、黎巴嫩林宮。從推羅迎來滿有智慧與技能的銅匠戶蘭，鑄造聖殿門口的兩根大銅柱「雅斤（祂必建立）」與「波阿斯（在祂有力量）」、巨大銅海、十個銅車盆座與金香壇器皿。
+      </p>
+
+      <div class="copy-container" style="margin-bottom:18px;">
+        <div class="copy-header">
+          <span class="copy-label">本章經文全文（和合本）</span>
+          <button class="btn-copy" onclick="copyText('chap-raw-7', this)">📋 複製本章全部經文</button>
+        </div>
+      </div>
+
+      <div style="padding:4px 0;">
+        <div class="verse-item"><span class="verse-num">1</span><span class="verse-text">所羅門為自己建造宮室，十三年方才造成；</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">又建造利巴嫩林宮，長一百肘，寬五十肘，高三十肘，有香柏木柱三(原文作四)行，柱上有香柏木柁梁。</span></div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">其上以香柏木為蓋，每行柱子十五根，共有四十五根。</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">有窗戶三層，窗與窗相對。</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">所有的門框都是厚木見方的，有窗戶三層，窗與窗相對。</span></div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">並建造有柱子的廊子，長五十肘，寬三十肘；在這廊前又有廊子，廊外有柱子和臺階。</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">又建造一廊，其中設立審判的座位，這廊從地到頂都用香柏木遮蔽。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">廊後院內有所羅門住的宮室；工作與這工作相同。所羅門又為所娶法老的女兒建造一宮，做法與這廊子一樣。</span></div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">建造這一切所用的石頭都是寶貴的，是按著尺寸鑿成的，是用鋸裡外鋸齊的；從根基直到檐石，從外頭直到大院，都是如此。</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">根基是寶貴的大石頭，有長十肘的，有長八肘的；</span></div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">上面有香柏木和按著尺寸鑿成寶貴的石頭。</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">大院周圍有鑿成的石頭三層、香柏木一層，都照耶和華殿的內院和殿廊的樣式。</span></div><div class="verse-item"><span class="verse-num">13</span><span class="verse-text">所羅門王差遣人往推羅去，將戶蘭召了來。</span></div><div class="verse-item"><span class="verse-num">14</span><span class="verse-text">他是拿弗他利支派中一個寡婦的兒子，他父親是推羅人，作銅匠的。戶蘭滿有智慧、聰明、技能，善於各樣銅作。他來到所羅門王那裡，做王一切所要做的。</span></div><div class="verse-item"><span class="verse-num">15</span><span class="verse-text">他製造兩根銅柱，每根高十八肘，圍十二肘。</span></div><div class="verse-item"><span class="verse-num">16</span><span class="verse-text">又用銅鑄了兩個柱頂安在柱上，各高五肘。</span></div><div class="verse-item"><span class="verse-num">17</span><span class="verse-text">柱頂上有裝修的網子和擰成的鍊索，每頂七個。</span></div><div class="verse-item"><span class="verse-num">18</span><span class="verse-text">網子周圍有兩行石榴遮蓋柱頂，兩個柱頂都是如此。</span></div><div class="verse-item"><span class="verse-num">19</span><span class="verse-text">廊子的柱頂徑四肘，刻著百合花。</span></div><div class="verse-item"><span class="verse-num">20</span><span class="verse-text">兩柱頂的鼓肚上挨著網子，各有兩行石榴環繞，兩行共有二百。</span></div><div class="verse-item"><span class="verse-num">21</span><span class="verse-text">他將兩根柱子立在殿廊前頭：右邊立一根，起名叫雅斤；左邊立一根，起名叫波阿斯。</span></div><div class="verse-item"><span class="verse-num">22</span><span class="verse-text">在柱頂上刻著百合花。這樣，造柱子的工就完畢了。</span></div><div class="verse-item"><span class="verse-num">23</span><span class="verse-text">他又鑄一個銅海，樣式是圓的，高五肘，徑十肘，圍三十肘。</span></div><div class="verse-item"><span class="verse-num">24</span><span class="verse-text">在海邊之下，周圍有野瓜的樣式；每肘十瓜，共有兩行，是鑄海的時候鑄上的。</span></div><div class="verse-item"><span class="verse-num">25</span><span class="verse-text">有十二隻銅牛馱海：三隻向北，三隻向西，三隻向南，三隻向東；海在牛上，牛尾都向內。</span></div><div class="verse-item"><span class="verse-num">26</span><span class="verse-text">海厚一掌，邊如杯邊，又如百合花，可容二千罷特。</span></div><div class="verse-item"><span class="verse-num">27</span><span class="verse-text">他用銅製造十個盆座，每座長四肘，寬四肘，高三肘。</span></div><div class="verse-item"><span class="verse-num">28</span><span class="verse-text">座的造法是這樣：四面都有心子，心子在邊子當中，</span></div><div class="verse-item"><span class="verse-num">29</span><span class="verse-text">心子上有獅子和牛，並基路伯；邊上有小座，獅子和牛以下有垂下的瓔珞。</span></div><div class="verse-item"><span class="verse-num">30</span><span class="verse-text">每盆座有四個銅輪和銅軸。小座的四角上在盆以下，有鑄成的盆架，其旁都有瓔珞。</span></div><div class="verse-item"><span class="verse-num">31</span><span class="verse-text">小座高一肘，口是圓的，彷彿座的樣式，徑一肘半，在口上有雕工，心子是方的，不是圓的。</span></div><div class="verse-item"><span class="verse-num">32</span><span class="verse-text">四個輪子在心子以下，輪軸與座相連，每輪高一肘半。</span></div><div class="verse-item"><span class="verse-num">33</span><span class="verse-text">輪的樣式如同車輪；軸、輞、輻、轂都是鑄的。</span></div><div class="verse-item"><span class="verse-num">34</span><span class="verse-text">每座四角上都有盆架，是與座一同鑄成的。</span></div><div class="verse-item"><span class="verse-num">35</span><span class="verse-text">座上有圓架，高半肘；座上有撐子和心子，是與座一同鑄的。</span></div><div class="verse-item"><span class="verse-num">36</span><span class="verse-text">在撐子和心子上刻著基路伯、獅子，和棕樹，周圍有瓔珞。</span></div><div class="verse-item"><span class="verse-num">37</span><span class="verse-text">十個盆座都是這樣，鑄法、尺寸、樣式相同。</span></div><div class="verse-item"><span class="verse-num">38</span><span class="verse-text">又用銅製造十個盆，每盆可容四十罷特。盆徑四肘，在那十座上，每座安設一盆。</span></div><div class="verse-item"><span class="verse-num">39</span><span class="verse-text">五個安在殿門的右邊，五個放在殿門的左邊；又將海放在殿門的右旁，就是南邊。</span></div><div class="verse-item"><span class="verse-num">40</span><span class="verse-text">戶蘭又造了盆、鏟子，和盤子。這樣，他為所羅門王做完了耶和華殿的一切工。</span></div><div class="verse-item"><span class="verse-num">41</span><span class="verse-text">所造的就是：兩根柱子和柱上兩個如球的頂；並兩個蓋柱頂的網子；</span></div><div class="verse-item"><span class="verse-num">42</span><span class="verse-text">和四百石榴，安在兩個網子上，每網兩行，蓋著兩個柱上如球的頂；</span></div><div class="verse-item"><span class="verse-num">43</span><span class="verse-text">十個座和其上的十個盆；</span></div><div class="verse-item"><span class="verse-num">44</span><span class="verse-text">海和海下的十二隻牛；</span></div><div class="verse-item"><span class="verse-num">45</span><span class="verse-text">盆、鏟子、盤子。這一切都是戶蘭給所羅門王用光亮的銅為耶和華的殿造成的，</span></div><div class="verse-item"><span class="verse-num">46</span><span class="verse-text">是遵王命在約但平原、疏割和撒拉但中間藉膠泥鑄成的。</span></div><div class="verse-item"><span class="verse-num">47</span><span class="verse-text">這一切所羅門都沒有過秤；因為甚多，銅的輕重也無法可查。</span></div><div class="verse-item"><span class="verse-num">48</span><span class="verse-text">所羅門又造耶和華殿裡的金壇和陳設餅的金桌子；</span></div><div class="verse-item"><span class="verse-num">49</span><span class="verse-text">內殿前的精金燈臺：右邊五個，左邊五個，並其上的金花、燈盞、蠟剪，</span></div><div class="verse-item"><span class="verse-num">50</span><span class="verse-text">與精金的杯、盤、鑷子、調羹、火鼎，以及至聖所、內殿的門樞，和外殿的門樞。</span></div><div class="verse-item"><span class="verse-num">51</span><span class="verse-text">所羅門王做完了耶和華殿的一切工，就把他父大衛分別為聖的金銀和器皿都帶來放在耶和華殿的府庫裡。</span></div>
+      </div>
+
+      <div id="chap-raw-7" style="display:none;">7:1 所羅門為自己建造宮室，十三年方才造成；\n7:2 又建造利巴嫩林宮，長一百肘，寬五十肘，高三十肘，有香柏木柱三(原文作四)行，柱上有香柏木柁梁。\n7:3 其上以香柏木為蓋，每行柱子十五根，共有四十五根。\n7:4 有窗戶三層，窗與窗相對。\n7:5 所有的門框都是厚木見方的，有窗戶三層，窗與窗相對。\n7:6 並建造有柱子的廊子，長五十肘，寬三十肘；在這廊前又有廊子，廊外有柱子和臺階。\n7:7 又建造一廊，其中設立審判的座位，這廊從地到頂都用香柏木遮蔽。\n7:8 廊後院內有所羅門住的宮室；工作與這工作相同。所羅門又為所娶法老的女兒建造一宮，做法與這廊子一樣。\n7:9 建造這一切所用的石頭都是寶貴的，是按著尺寸鑿成的，是用鋸裡外鋸齊的；從根基直到檐石，從外頭直到大院，都是如此。\n7:10 根基是寶貴的大石頭，有長十肘的，有長八肘的；\n7:11 上面有香柏木和按著尺寸鑿成寶貴的石頭。\n7:12 大院周圍有鑿成的石頭三層、香柏木一層，都照耶和華殿的內院和殿廊的樣式。\n7:13 所羅門王差遣人往推羅去，將戶蘭召了來。\n7:14 他是拿弗他利支派中一個寡婦的兒子，他父親是推羅人，作銅匠的。戶蘭滿有智慧、聰明、技能，善於各樣銅作。他來到所羅門王那裡，做王一切所要做的。\n7:15 他製造兩根銅柱，每根高十八肘，圍十二肘。\n7:16 又用銅鑄了兩個柱頂安在柱上，各高五肘。\n7:17 柱頂上有裝修的網子和擰成的鍊索，每頂七個。\n7:18 網子周圍有兩行石榴遮蓋柱頂，兩個柱頂都是如此。\n7:19 廊子的柱頂徑四肘，刻著百合花。\n7:20 兩柱頂的鼓肚上挨著網子，各有兩行石榴環繞，兩行共有二百。\n7:21 他將兩根柱子立在殿廊前頭：右邊立一根，起名叫雅斤；左邊立一根，起名叫波阿斯。\n7:22 在柱頂上刻著百合花。這樣，造柱子的工就完畢了。\n7:23 他又鑄一個銅海，樣式是圓的，高五肘，徑十肘，圍三十肘。\n7:24 在海邊之下，周圍有野瓜的樣式；每肘十瓜，共有兩行，是鑄海的時候鑄上的。\n7:25 有十二隻銅牛馱海：三隻向北，三隻向西，三隻向南，三隻向東；海在牛上，牛尾都向內。\n7:26 海厚一掌，邊如杯邊，又如百合花，可容二千罷特。\n7:27 他用銅製造十個盆座，每座長四肘，寬四肘，高三肘。\n7:28 座的造法是這樣：四面都有心子，心子在邊子當中，\n7:29 心子上有獅子和牛，並基路伯；邊上有小座，獅子和牛以下有垂下的瓔珞。\n7:30 每盆座有四個銅輪和銅軸。小座的四角上在盆以下，有鑄成的盆架，其旁都有瓔珞。\n7:31 小座高一肘，口是圓的，彷彿座的樣式，徑一肘半，在口上有雕工，心子是方的，不是圓的。\n7:32 四個輪子在心子以下，輪軸與座相連，每輪高一肘半。\n7:33 輪的樣式如同車輪；軸、輞、輻、轂都是鑄的。\n7:34 每座四角上都有盆架，是與座一同鑄成的。\n7:35 座上有圓架，高半肘；座上有撐子和心子，是與座一同鑄的。\n7:36 在撐子和心子上刻著基路伯、獅子，和棕樹，周圍有瓔珞。\n7:37 十個盆座都是這樣，鑄法、尺寸、樣式相同。\n7:38 又用銅製造十個盆，每盆可容四十罷特。盆徑四肘，在那十座上，每座安設一盆。\n7:39 五個安在殿門的右邊，五個放在殿門的左邊；又將海放在殿門的右旁，就是南邊。\n7:40 戶蘭又造了盆、鏟子，和盤子。這樣，他為所羅門王做完了耶和華殿的一切工。\n7:41 所造的就是：兩根柱子和柱上兩個如球的頂；並兩個蓋柱頂的網子；\n7:42 和四百石榴，安在兩個網子上，每網兩行，蓋著兩個柱上如球的頂；\n7:43 十個座和其上的十個盆；\n7:44 海和海下的十二隻牛；\n7:45 盆、鏟子、盤子。這一切都是戶蘭給所羅門王用光亮的銅為耶和華的殿造成的，\n7:46 是遵王命在約但平原、疏割和撒拉但中間藉膠泥鑄成的。\n7:47 這一切所羅門都沒有過秤；因為甚多，銅的輕重也無法可查。\n7:48 所羅門又造耶和華殿裡的金壇和陳設餅的金桌子；\n7:49 內殿前的精金燈臺：右邊五個，左邊五個，並其上的金花、燈盞、蠟剪，\n7:50 與精金的杯、盤、鑷子、調羹、火鼎，以及至聖所、內殿的門樞，和外殿的門樞。\n7:51 所羅門王做完了耶和華殿的一切工，就把他父大衛分別為聖的金銀和器皿都帶來放在耶和華殿的府庫裡。</div>
+    </section>
+    
+    <section class="card" id="chap-8">
+      <div class="card-title">
+        <span class="icon">📜</span>
+        <span>列王紀上 第 8 章｜榮光充滿聖殿、所羅門獻殿祈禱與祝福</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <span class="badge badge-cyan">10/24 (六) 進度</span>
+        <span class="badge badge-gold">共 66 節經文</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:6px;margin-bottom:16px;">
+        💡 <strong>章節導讀：</strong>約櫃迎入至聖所，耶和華的榮光充滿聖殿，祭司不能站立供職。所羅門在壇前向天舉手，發出震動歷史的獻殿禱告，求神無論百姓何時軟弱受懲，只要向這殿回轉呼求，神便在天上垂聽赦免。
+      </p>
+
+      <div class="copy-container" style="margin-bottom:18px;">
+        <div class="copy-header">
+          <span class="copy-label">本章經文全文（和合本）</span>
+          <button class="btn-copy" onclick="copyText('chap-raw-8', this)">📋 複製本章全部經文</button>
+        </div>
+      </div>
+
+      <div style="padding:4px 0;">
+        <div class="verse-item"><span class="verse-num">1</span><span class="verse-text">那時，所羅門將以色列的長老和各支派的首領，並以色列的族長，招聚到耶路撒冷，要把耶和華的約櫃從大衛城─就是錫安─運上來。</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">以他念月，就是七月，在節前，以色列人都聚集到所羅門王那裡。</span></div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">以色列長老來到，祭司便抬起約櫃，</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">祭司和利未人將耶和華的約櫃運上來，又將會幕和會幕的一切聖器具都帶上來。</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">所羅門王和聚集到他那裡的以色列全會眾，一同在約櫃前獻牛羊為祭，多得不可勝數。</span></div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">祭司將耶和華的約櫃抬進內殿，就是至聖所，放在兩個基路伯的翅膀底下。</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">基路伯張著翅膀在約櫃之上，遮掩約櫃和抬櫃的杠。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">這杠甚長，杠頭在內殿前的聖所可以看見，在殿外卻不能看見，直到如今還在那裡。</span></div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">約櫃裡惟有兩塊石版，就是以色列人出埃及地後，耶和華與他們立約的時候摩西在何烈山所放的。除此以外，並無別物。</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">祭司從聖所出來的時候，有雲充滿耶和華的殿；</span></div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">甚至祭司不能站立供職，因為耶和華的榮光充滿了殿。</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">那時所羅門說：耶和華曾說，他必住在幽暗之處。</span></div><div class="verse-item"><span class="verse-num">13</span><span class="verse-text">我已經建造殿宇作你的居所，為你永遠的住處。</span></div><div class="verse-item"><span class="verse-num">14</span><span class="verse-text">王轉臉為以色列會眾祝福，以色列會眾就都站立。</span></div><div class="verse-item"><span class="verse-num">15</span><span class="verse-text">所羅門說：耶和華─以色列的神是應當稱頌的！因他親口向我父大衛所應許的，也親手成就了。</span></div><div class="verse-item"><span class="verse-num">16</span><span class="verse-text">他說：自從我領我民以色列出埃及以來，我未曾在以色列各支派中選擇一城建造殿宇─為我名的居所，但揀選大衛治理我民以色列。</span></div><div class="verse-item"><span class="verse-num">17</span><span class="verse-text">所羅門說：我父大衛曾立意，要為耶和華─以色列神的名建殿。</span></div><div class="verse-item"><span class="verse-num">18</span><span class="verse-text">耶和華卻對我父大衛說：你立意為我的名建殿，這意思甚好。</span></div><div class="verse-item"><span class="verse-num">19</span><span class="verse-text">只是你不可建殿，惟你所生的兒子必為我名建殿。</span></div><div class="verse-item"><span class="verse-num">20</span><span class="verse-text">現在耶和華成就了他所應許的話，使我接續我父大衛坐以色列的國位，又為耶和華─以色列神的名建造了殿。</span></div><div class="verse-item"><span class="verse-num">21</span><span class="verse-text">我也在其中為約櫃預備一處。約櫃內有耶和華的約，就是他領我們列祖出埃及地的時候，與他們所立的約。</span></div><div class="verse-item"><span class="verse-num">22</span><span class="verse-text">所羅門當著以色列會眾，站在耶和華的壇前，向天舉手說：</span></div><div class="verse-item"><span class="verse-num">23</span><span class="verse-text">耶和華─以色列的神啊，天上地下沒有神可比你的！你向那盡心行在你面前的僕人守約施慈愛；</span></div><div class="verse-item"><span class="verse-num">24</span><span class="verse-text">向你僕人─我父大衛所應許的話現在應驗了。你親口應許，親手成就，正如今日一樣。</span></div><div class="verse-item"><span class="verse-num">25</span><span class="verse-text">耶和華─以色列的神啊，你所應許你僕人─我父大衛的話說：你的子孫若謹慎自己的行為，在我面前行事像你所行的一樣，就不斷人坐以色列的國位。現在求你應驗這話。</span></div><div class="verse-item"><span class="verse-num">26</span><span class="verse-text">以色列的神啊，求你成就向你僕人─我父大衛所應許的話。</span></div><div class="verse-item"><span class="verse-num">27</span><span class="verse-text">神果真住在地上麼？看哪，天和天上的天尚且不足你居住的，何況我所建的這殿呢？</span></div><div class="verse-item"><span class="verse-num">28</span><span class="verse-text">惟求耶和華─我的神垂顧僕人的禱告祈求，俯聽僕人今日在你面前的祈禱呼籲。</span></div><div class="verse-item"><span class="verse-num">29</span><span class="verse-text">願你晝夜看顧這殿，就是你應許立為你名的居所；求你垂聽僕人向此處禱告的話。</span></div><div class="verse-item"><span class="verse-num">30</span><span class="verse-text">你僕人和你民以色列向此處祈禱的時候，求你在天上你的居所垂聽，垂聽而赦免。</span></div><div class="verse-item"><span class="verse-num">31</span><span class="verse-text">人若得罪鄰舍，有人叫他起誓，他來到這殿在你的壇前起誓，</span></div><div class="verse-item"><span class="verse-num">32</span><span class="verse-text">求你在天上垂聽，判斷你的僕人：定惡人有罪，照他所行的報應在他頭上；定義人有理，照他的義賞賜他。</span></div><div class="verse-item"><span class="verse-num">33</span><span class="verse-text">你的民以色列若得罪你，敗在仇敵面前，又歸向你，承認你的名，在這殿裡祈求禱告，</span></div><div class="verse-item"><span class="verse-num">34</span><span class="verse-text">求你在天上垂聽，赦免你民以色列的罪，使他們歸回你賜給他們列祖之地。</span></div><div class="verse-item"><span class="verse-num">35</span><span class="verse-text">你的民因得罪你，你懲罰他們，使天閉塞不下雨；他們若向此處禱告，承認你的名，離開他們的罪，</span></div><div class="verse-item"><span class="verse-num">36</span><span class="verse-text">求你在天上垂聽，赦免你僕人以色列民的罪，將當行的善道指教他們，且降雨在你的地，就是你賜給你民為業之地。</span></div><div class="verse-item"><span class="verse-num">37</span><span class="verse-text">國中若有饑荒、瘟疫、旱風、霉爛、蝗蟲、螞蚱，或有仇敵犯境圍困城邑，無論遭遇甚麼災禍疾病，</span></div><div class="verse-item"><span class="verse-num">38</span><span class="verse-text">你的民以色列，或是眾人，或是一人，自覺有罪(原文作災)，向這殿舉手，無論祈求甚麼，禱告甚麼，</span></div><div class="verse-item"><span class="verse-num">39</span><span class="verse-text">求你在天上你的居所垂聽赦免。你是知道人心的，要照各人所行的待他們（惟有你知道世人的心），</span></div><div class="verse-item"><span class="verse-num">40</span><span class="verse-text">使他們在你賜給我們列祖之地上一生一世敬畏你。</span></div><div class="verse-item"><span class="verse-num">41</span><span class="verse-text">論到不屬你民以色列的外邦人，為你名從遠方而來，</span></div><div class="verse-item"><span class="verse-num">42</span><span class="verse-text">（他們聽人論說你的大名和大能的手，並伸出來的膀臂）向這殿禱告，</span></div><div class="verse-item"><span class="verse-num">43</span><span class="verse-text">求你在天上你的居所垂聽，照著外邦人所祈求的而行，使天下萬民都認識你的名，敬畏你像你的民以色列一樣；又使他們知道我建造的這殿是稱為你名下的。</span></div><div class="verse-item"><span class="verse-num">44</span><span class="verse-text">你的民若奉你的差遣，無論往何處去與仇敵爭戰，向耶和華所選擇的城與我為你名所建造的殿禱告，</span></div><div class="verse-item"><span class="verse-num">45</span><span class="verse-text">求你在天上垂聽他們的禱告祈求，使他們得勝。</span></div><div class="verse-item"><span class="verse-num">46</span><span class="verse-text">你的民若得罪你（世上沒有不犯罪的人），你向他們發怒，將他們交給仇敵擄到仇敵之地，或遠或近，</span></div><div class="verse-item"><span class="verse-num">47</span><span class="verse-text">他們若在擄到之地想起罪來，回心轉意，懇求你說：我們有罪了，我們悖逆了，我們作惡了；</span></div><div class="verse-item"><span class="verse-num">48</span><span class="verse-text">他們若在擄到之地盡心盡性歸服你，又向自己的地，就是你賜給他們列祖之地和你所選擇的城，並我為你名所建造的殿禱告，</span></div><div class="verse-item"><span class="verse-num">49</span><span class="verse-text">求你在天上你的居所垂聽他們的禱告祈求，為他們伸冤；</span></div><div class="verse-item"><span class="verse-num">50</span><span class="verse-text">饒恕得罪你的民，赦免他們的一切過犯，使他們在擄他們的人面前蒙憐恤。</span></div><div class="verse-item"><span class="verse-num">51</span><span class="verse-text">因為他們是你的子民，你的產業，是你從埃及領出來脫離鐵爐的。</span></div><div class="verse-item"><span class="verse-num">52</span><span class="verse-text">願你的眼目看顧僕人，聽你民以色列的祈求，無論何時向你祈求，願你垂聽。</span></div><div class="verse-item"><span class="verse-num">53</span><span class="verse-text">主耶和華啊，你將他們從地上的萬民中分別出來作你的產業，是照你領我們列祖出埃及的時候，藉你僕人摩西所應許的話。</span></div><div class="verse-item"><span class="verse-num">54</span><span class="verse-text">所羅門在耶和華的壇前屈膝跪著，向天舉手，在耶和華面前禱告祈求已畢，就起來，</span></div><div class="verse-item"><span class="verse-num">55</span><span class="verse-text">站著，大聲為以色列全會眾祝福，說：</span></div><div class="verse-item"><span class="verse-num">56</span><span class="verse-text">耶和華是應當稱頌的！因為他照著一切所應許的賜平安給他的民以色列人，凡藉他僕人摩西應許賜福的話，一句都沒有落空。</span></div><div class="verse-item"><span class="verse-num">57</span><span class="verse-text">願耶和華─我們的神與我們同在，像與我們列祖同在一樣，不撇下我們，不丟棄我們，</span></div><div class="verse-item"><span class="verse-num">58</span><span class="verse-text">使我們的心歸向他，遵行他的道，謹守他吩咐我們列祖的誡命、律例、典章。</span></div><div class="verse-item"><span class="verse-num">59</span><span class="verse-text">我在耶和華面前祈求的這些話，願耶和華─我們的神晝夜垂念，每日為他僕人與他民以色列伸冤，</span></div><div class="verse-item"><span class="verse-num">60</span><span class="verse-text">使地上的萬民都知道惟獨耶和華是神，並無別神。</span></div><div class="verse-item"><span class="verse-num">61</span><span class="verse-text">所以你們當向耶和華─我們的神存誠實的心，遵行他的律例，謹守他的誡命，至終如今日一樣。</span></div><div class="verse-item"><span class="verse-num">62</span><span class="verse-text">王和以色列眾民一同在耶和華面前獻祭。</span></div><div class="verse-item"><span class="verse-num">63</span><span class="verse-text">所羅門向耶和華獻平安祭，用牛二萬二千，羊十二萬。這樣，王和以色列眾民為耶和華的殿行奉獻之禮。</span></div><div class="verse-item"><span class="verse-num">64</span><span class="verse-text">當日，王因耶和華殿前的銅壇太小，容不下燔祭、素祭，和平安祭牲的脂油，便將耶和華殿前院子當中分別為聖，在那裡獻燔祭、素祭，和平安祭牲的脂油。</span></div><div class="verse-item"><span class="verse-num">65</span><span class="verse-text">那時，所羅門和以色列眾人，就是從哈馬口直到埃及小河所有的以色列人，都聚集成為大會，在耶和華─我們的神面前守節七日又七日，共十四日。</span></div><div class="verse-item"><span class="verse-num">66</span><span class="verse-text">第八日，王遣散眾民；他們都為王祝福。因見耶和華向他僕人大衛和他民以色列所施的一切恩惠，就都心中喜樂，各歸各家去了。</span></div>
+      </div>
+
+      <div id="chap-raw-8" style="display:none;">8:1 那時，所羅門將以色列的長老和各支派的首領，並以色列的族長，招聚到耶路撒冷，要把耶和華的約櫃從大衛城─就是錫安─運上來。\n8:2 以他念月，就是七月，在節前，以色列人都聚集到所羅門王那裡。\n8:3 以色列長老來到，祭司便抬起約櫃，\n8:4 祭司和利未人將耶和華的約櫃運上來，又將會幕和會幕的一切聖器具都帶上來。\n8:5 所羅門王和聚集到他那裡的以色列全會眾，一同在約櫃前獻牛羊為祭，多得不可勝數。\n8:6 祭司將耶和華的約櫃抬進內殿，就是至聖所，放在兩個基路伯的翅膀底下。\n8:7 基路伯張著翅膀在約櫃之上，遮掩約櫃和抬櫃的杠。\n8:8 這杠甚長，杠頭在內殿前的聖所可以看見，在殿外卻不能看見，直到如今還在那裡。\n8:9 約櫃裡惟有兩塊石版，就是以色列人出埃及地後，耶和華與他們立約的時候摩西在何烈山所放的。除此以外，並無別物。\n8:10 祭司從聖所出來的時候，有雲充滿耶和華的殿；\n8:11 甚至祭司不能站立供職，因為耶和華的榮光充滿了殿。\n8:12 那時所羅門說：耶和華曾說，他必住在幽暗之處。\n8:13 我已經建造殿宇作你的居所，為你永遠的住處。\n8:14 王轉臉為以色列會眾祝福，以色列會眾就都站立。\n8:15 所羅門說：耶和華─以色列的神是應當稱頌的！因他親口向我父大衛所應許的，也親手成就了。\n8:16 他說：自從我領我民以色列出埃及以來，我未曾在以色列各支派中選擇一城建造殿宇─為我名的居所，但揀選大衛治理我民以色列。\n8:17 所羅門說：我父大衛曾立意，要為耶和華─以色列神的名建殿。\n8:18 耶和華卻對我父大衛說：你立意為我的名建殿，這意思甚好。\n8:19 只是你不可建殿，惟你所生的兒子必為我名建殿。\n8:20 現在耶和華成就了他所應許的話，使我接續我父大衛坐以色列的國位，又為耶和華─以色列神的名建造了殿。\n8:21 我也在其中為約櫃預備一處。約櫃內有耶和華的約，就是他領我們列祖出埃及地的時候，與他們所立的約。\n8:22 所羅門當著以色列會眾，站在耶和華的壇前，向天舉手說：\n8:23 耶和華─以色列的神啊，天上地下沒有神可比你的！你向那盡心行在你面前的僕人守約施慈愛；\n8:24 向你僕人─我父大衛所應許的話現在應驗了。你親口應許，親手成就，正如今日一樣。\n8:25 耶和華─以色列的神啊，你所應許你僕人─我父大衛的話說：你的子孫若謹慎自己的行為，在我面前行事像你所行的一樣，就不斷人坐以色列的國位。現在求你應驗這話。\n8:26 以色列的神啊，求你成就向你僕人─我父大衛所應許的話。\n8:27 神果真住在地上麼？看哪，天和天上的天尚且不足你居住的，何況我所建的這殿呢？\n8:28 惟求耶和華─我的神垂顧僕人的禱告祈求，俯聽僕人今日在你面前的祈禱呼籲。\n8:29 願你晝夜看顧這殿，就是你應許立為你名的居所；求你垂聽僕人向此處禱告的話。\n8:30 你僕人和你民以色列向此處祈禱的時候，求你在天上你的居所垂聽，垂聽而赦免。\n8:31 人若得罪鄰舍，有人叫他起誓，他來到這殿在你的壇前起誓，\n8:32 求你在天上垂聽，判斷你的僕人：定惡人有罪，照他所行的報應在他頭上；定義人有理，照他的義賞賜他。\n8:33 你的民以色列若得罪你，敗在仇敵面前，又歸向你，承認你的名，在這殿裡祈求禱告，\n8:34 求你在天上垂聽，赦免你民以色列的罪，使他們歸回你賜給他們列祖之地。\n8:35 你的民因得罪你，你懲罰他們，使天閉塞不下雨；他們若向此處禱告，承認你的名，離開他們的罪，\n8:36 求你在天上垂聽，赦免你僕人以色列民的罪，將當行的善道指教他們，且降雨在你的地，就是你賜給你民為業之地。\n8:37 國中若有饑荒、瘟疫、旱風、霉爛、蝗蟲、螞蚱，或有仇敵犯境圍困城邑，無論遭遇甚麼災禍疾病，\n8:38 你的民以色列，或是眾人，或是一人，自覺有罪(原文作災)，向這殿舉手，無論祈求甚麼，禱告甚麼，\n8:39 求你在天上你的居所垂聽赦免。你是知道人心的，要照各人所行的待他們（惟有你知道世人的心），\n8:40 使他們在你賜給我們列祖之地上一生一世敬畏你。\n8:41 論到不屬你民以色列的外邦人，為你名從遠方而來，\n8:42 （他們聽人論說你的大名和大能的手，並伸出來的膀臂）向這殿禱告，\n8:43 求你在天上你的居所垂聽，照著外邦人所祈求的而行，使天下萬民都認識你的名，敬畏你像你的民以色列一樣；又使他們知道我建造的這殿是稱為你名下的。\n8:44 你的民若奉你的差遣，無論往何處去與仇敵爭戰，向耶和華所選擇的城與我為你名所建造的殿禱告，\n8:45 求你在天上垂聽他們的禱告祈求，使他們得勝。\n8:46 你的民若得罪你（世上沒有不犯罪的人），你向他們發怒，將他們交給仇敵擄到仇敵之地，或遠或近，\n8:47 他們若在擄到之地想起罪來，回心轉意，懇求你說：我們有罪了，我們悖逆了，我們作惡了；\n8:48 他們若在擄到之地盡心盡性歸服你，又向自己的地，就是你賜給他們列祖之地和你所選擇的城，並我為你名所建造的殿禱告，\n8:49 求你在天上你的居所垂聽他們的禱告祈求，為他們伸冤；\n8:50 饒恕得罪你的民，赦免他們的一切過犯，使他們在擄他們的人面前蒙憐恤。\n8:51 因為他們是你的子民，你的產業，是你從埃及領出來脫離鐵爐的。\n8:52 願你的眼目看顧僕人，聽你民以色列的祈求，無論何時向你祈求，願你垂聽。\n8:53 主耶和華啊，你將他們從地上的萬民中分別出來作你的產業，是照你領我們列祖出埃及的時候，藉你僕人摩西所應許的話。\n8:54 所羅門在耶和華的壇前屈膝跪著，向天舉手，在耶和華面前禱告祈求已畢，就起來，\n8:55 站著，大聲為以色列全會眾祝福，說：\n8:56 耶和華是應當稱頌的！因為他照著一切所應許的賜平安給他的民以色列人，凡藉他僕人摩西應許賜福的話，一句都沒有落空。\n8:57 願耶和華─我們的神與我們同在，像與我們列祖同在一樣，不撇下我們，不丟棄我們，\n8:58 使我們的心歸向他，遵行他的道，謹守他吩咐我們列祖的誡命、律例、典章。\n8:59 我在耶和華面前祈求的這些話，願耶和華─我們的神晝夜垂念，每日為他僕人與他民以色列伸冤，\n8:60 使地上的萬民都知道惟獨耶和華是神，並無別神。\n8:61 所以你們當向耶和華─我們的神存誠實的心，遵行他的律例，謹守他的誡命，至終如今日一樣。\n8:62 王和以色列眾民一同在耶和華面前獻祭。\n8:63 所羅門向耶和華獻平安祭，用牛二萬二千，羊十二萬。這樣，王和以色列眾民為耶和華的殿行奉獻之禮。\n8:64 當日，王因耶和華殿前的銅壇太小，容不下燔祭、素祭，和平安祭牲的脂油，便將耶和華殿前院子當中分別為聖，在那裡獻燔祭、素祭，和平安祭牲的脂油。\n8:65 那時，所羅門和以色列眾人，就是從哈馬口直到埃及小河所有的以色列人，都聚集成為大會，在耶和華─我們的神面前守節七日又七日，共十四日。\n8:66 第八日，王遣散眾民；他們都為王祝福。因見耶和華向他僕人大衛和他民以色列所施的一切恩惠，就都心中喜樂，各歸各家去了。</div>
+    </section>
+    
+    <section class="card" id="chap-9">
+      <div class="card-title">
+        <span class="icon">📜</span>
+        <span>列王紀上 第 9 章｜神第二次顯現立約、與希蘭交割與盛世工程</span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <span class="badge badge-cyan">10/25 (日) 進度</span>
+        <span class="badge badge-gold">共 28 節經文</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;background:rgba(255,255,255,0.02);padding:10px 14px;border-radius:6px;margin-bottom:16px;">
+        💡 <strong>章節導讀：</strong>殿與王宮建造完畢後，耶和華第二次向所羅門顯現，宣告已將聖殿分別為聖，但也發出無比嚴正的警告：若子孫背棄神去事奉別神，必剪除以色列並使這殿成為笑柄。
+      </p>
+
+      <div class="copy-container" style="margin-bottom:18px;">
+        <div class="copy-header">
+          <span class="copy-label">本章經文全文（和合本）</span>
+          <button class="btn-copy" onclick="copyText('chap-raw-9', this)">📋 複製本章全部經文</button>
+        </div>
+      </div>
+
+      <div style="padding:4px 0;">
+        <div class="verse-item"><span class="verse-num">1</span><span class="verse-text">所羅門建造耶和華殿和王宮，並一切所願意建造的都完畢了，</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">耶和華就二次向所羅門顯現，如先前在基遍向他顯現一樣，</span></div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">對他說：你向我所禱告祈求的，我都應允了。我已將你所建的這殿分別為聖，使我的名永遠在其中；我的眼、我的心也必常在那裡。</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">你若效法你父大衛，存誠實正直的心行在我面前，遵行我一切所吩咐你的，謹守我的律例典章，</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">我就必堅固你的國位在以色列中，直到永遠，正如我應許你父大衛說：你的子孫必不斷人坐以色列的國位。</span></div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">倘若你們和你們的子孫轉去不跟從我，不守我指示你們的誡命律例，去事奉敬拜別神，</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">我就必將以色列人從我賜給他們的地上剪除，並且我為己名所分別為聖的殿也必捨棄不顧，使以色列人在萬民中作笑談，被譏誚。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">這殿雖然甚高，將來經過的人必驚訝、嗤笑，說：耶和華為何向這地和這殿如此行呢？</span></div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">人必回答說：是因此地的人離棄領他們列祖出埃及地之耶和華─他們的神，去親近別神，事奉敬拜他，所以耶和華使這一切災禍臨到他們。</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">所羅門建造耶和華殿和王宮，這兩所二十年才完畢了。</span></div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">推羅王希蘭曾照所羅門所要的，資助他香柏木、松木，和金子；所羅門王就把加利利地的二十座城給了希蘭。</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">希蘭從推羅出來，察看所羅門給他的城邑，就不喜悅，</span></div><div class="verse-item"><span class="verse-num">13</span><span class="verse-text">說：我兄啊，你給我的是甚麼城邑呢？他就給這城邑之地起名叫迦步勒，直到今日。</span></div><div class="verse-item"><span class="verse-num">14</span><span class="verse-text">希蘭給所羅門一百二十他連得金子。</span></div><div class="verse-item"><span class="verse-num">15</span><span class="verse-text">所羅門王挑取服苦的人，是為建造耶和華的殿、自己的宮、米羅、耶路撒冷的城牆、夏瑣、米吉多，並基色。</span></div><div class="verse-item"><span class="verse-num">16</span><span class="verse-text">先前埃及王法老上來攻取基色，用火焚燒，殺了城內居住的迦南人，將城賜給他女兒所羅門的妻作妝奩。</span></div><div class="verse-item"><span class="verse-num">17</span><span class="verse-text">所羅門建造基色、下伯和崙、</span></div><div class="verse-item"><span class="verse-num">18</span><span class="verse-text">巴拉，並國中曠野裡的達莫，</span></div><div class="verse-item"><span class="verse-num">19</span><span class="verse-text">又建造所有的積貨城，並屯車和馬兵的城，與耶路撒冷、利巴嫩，以及自己治理的全國中所願建造的。</span></div><div class="verse-item"><span class="verse-num">20</span><span class="verse-text">至於國中所剩下不屬以色列人的亞摩利人、赫人、比利洗人、希未人、耶布斯人，</span></div><div class="verse-item"><span class="verse-num">21</span><span class="verse-text">就是以色列人不能滅盡的，所羅門挑取他們的後裔作服苦的奴僕，直到今日。</span></div><div class="verse-item"><span class="verse-num">22</span><span class="verse-text">惟有以色列人，所羅門不使他們作奴僕，乃是作他的戰士、臣僕、統領、軍長、車兵長、馬兵長。</span></div><div class="verse-item"><span class="verse-num">23</span><span class="verse-text">所羅門有五百五十督工的，監管工人。</span></div><div class="verse-item"><span class="verse-num">24</span><span class="verse-text">法老的女兒從大衛城搬到所羅門為他建造的宮裡。那時，所羅門才建造米羅。</span></div><div class="verse-item"><span class="verse-num">25</span><span class="verse-text">所羅門每年三次在他為耶和華所築的壇上獻燔祭和平安祭，又在耶和華面前的壇上燒香。這樣，他建造殿的工程完畢了。</span></div><div class="verse-item"><span class="verse-num">26</span><span class="verse-text">所羅門王在以東地紅海邊，靠近以祿的以旬迦別製造船隻。</span></div><div class="verse-item"><span class="verse-num">27</span><span class="verse-text">希蘭差遣他的僕人，就是熟悉泛海的船家，與所羅門的僕人一同坐船航海。</span></div><div class="verse-item"><span class="verse-num">28</span><span class="verse-text">他們到了俄斐，從那裡得了四百二十他連得金子，運到所羅門王那裡。</span></div>
+      </div>
+
+      <div id="chap-raw-9" style="display:none;">9:1 所羅門建造耶和華殿和王宮，並一切所願意建造的都完畢了，\n9:2 耶和華就二次向所羅門顯現，如先前在基遍向他顯現一樣，\n9:3 對他說：你向我所禱告祈求的，我都應允了。我已將你所建的這殿分別為聖，使我的名永遠在其中；我的眼、我的心也必常在那裡。\n9:4 你若效法你父大衛，存誠實正直的心行在我面前，遵行我一切所吩咐你的，謹守我的律例典章，\n9:5 我就必堅固你的國位在以色列中，直到永遠，正如我應許你父大衛說：你的子孫必不斷人坐以色列的國位。\n9:6 倘若你們和你們的子孫轉去不跟從我，不守我指示你們的誡命律例，去事奉敬拜別神，\n9:7 我就必將以色列人從我賜給他們的地上剪除，並且我為己名所分別為聖的殿也必捨棄不顧，使以色列人在萬民中作笑談，被譏誚。\n9:8 這殿雖然甚高，將來經過的人必驚訝、嗤笑，說：耶和華為何向這地和這殿如此行呢？\n9:9 人必回答說：是因此地的人離棄領他們列祖出埃及地之耶和華─他們的神，去親近別神，事奉敬拜他，所以耶和華使這一切災禍臨到他們。\n9:10 所羅門建造耶和華殿和王宮，這兩所二十年才完畢了。\n9:11 推羅王希蘭曾照所羅門所要的，資助他香柏木、松木，和金子；所羅門王就把加利利地的二十座城給了希蘭。\n9:12 希蘭從推羅出來，察看所羅門給他的城邑，就不喜悅，\n9:13 說：我兄啊，你給我的是甚麼城邑呢？他就給這城邑之地起名叫迦步勒，直到今日。\n9:14 希蘭給所羅門一百二十他連得金子。\n9:15 所羅門王挑取服苦的人，是為建造耶和華的殿、自己的宮、米羅、耶路撒冷的城牆、夏瑣、米吉多，並基色。\n9:16 先前埃及王法老上來攻取基色，用火焚燒，殺了城內居住的迦南人，將城賜給他女兒所羅門的妻作妝奩。\n9:17 所羅門建造基色、下伯和崙、\n9:18 巴拉，並國中曠野裡的達莫，\n9:19 又建造所有的積貨城，並屯車和馬兵的城，與耶路撒冷、利巴嫩，以及自己治理的全國中所願建造的。\n9:20 至於國中所剩下不屬以色列人的亞摩利人、赫人、比利洗人、希未人、耶布斯人，\n9:21 就是以色列人不能滅盡的，所羅門挑取他們的後裔作服苦的奴僕，直到今日。\n9:22 惟有以色列人，所羅門不使他們作奴僕，乃是作他的戰士、臣僕、統領、軍長、車兵長、馬兵長。\n9:23 所羅門有五百五十督工的，監管工人。\n9:24 法老的女兒從大衛城搬到所羅門為他建造的宮裡。那時，所羅門才建造米羅。\n9:25 所羅門每年三次在他為耶和華所築的壇上獻燔祭和平安祭，又在耶和華面前的壇上燒香。這樣，他建造殿的工程完畢了。\n9:26 所羅門王在以東地紅海邊，靠近以祿的以旬迦別製造船隻。\n9:27 希蘭差遣他的僕人，就是熟悉泛海的船家，與所羅門的僕人一同坐船航海。\n9:28 他們到了俄斐，從那裡得了四百二十他連得金子，運到所羅門王那裡。</div>
+    </section>
+    
+<section class="card" id="chap-proverbs">
+  <div class="card-title">
+    <span class="icon">💎</span>
+    <span>每日搭配智慧書默想經文全文（箴言 26:26～27:12）</span>
+  </div>
+  <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px;">
+    「聖經旅行團」每日在通讀歷史書卷的同時，穿插《箴言》短節作為靈修默想，使讀者在宏大歷史中汲取日常生活為人處事的智慧。
+  </p>
+  <div class="copy-container" style="margin-bottom:18px;">
+    <div class="copy-header">
+      <span class="copy-label">本週箴言默想經文總覽</span>
+      <button class="btn-copy" onclick="copyText('prov-raw-all', this)">📋 一鍵複製所有箴言經文</button>
+    </div>
+  </div>
+  
+    <div style="background:var(--bg-input);border:1px solid var(--border-subtle);border-radius:10px;padding:16px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+        <span style="font-weight:700;color:var(--accent-purple);font-size:15px;">10/20 (二) ｜ 箴言 26:26-28</span>
+        <span style="font-size:13px;color:var(--text-dim);">言辭的真實與除掉心中詭詐</span>
+      </div>
+      <div><div class="verse-item"><span class="verse-num">26</span><span class="verse-text">他雖用詭詐遮掩自己的怨恨，他的邪惡必在會中顯露。</span></div><div class="verse-item"><span class="verse-num">27</span><span class="verse-text">挖陷坑的，自己必掉在其中；滾石頭的，石頭必反滾在他身上。</span></div><div class="verse-item"><span class="verse-num">28</span><span class="verse-text">虛謊的舌恨他所壓傷的人；諂媚的口敗壞人的事。</span></div></div>
+    </div>
+    
+    <div style="background:var(--bg-input);border:1px solid var(--border-subtle);border-radius:10px;padding:16px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+        <span style="font-weight:700;color:var(--accent-purple);font-size:15px;">10/21 (三) ｜ 箴言 27:1-2</span>
+        <span style="font-size:13px;color:var(--text-dim);">不為明日自誇，謙卑靜待他人稱讚</span>
+      </div>
+      <div><div class="verse-item"><span class="verse-num">1</span><span class="verse-text">不要為明日自誇，因為一日要生何事，你尚且不能知道。</span></div><div class="verse-item"><span class="verse-num">2</span><span class="verse-text">要別人誇獎你，不可用口自誇；等外人稱讚你，不可用嘴自稱。</span></div></div>
+    </div>
+    
+    <div style="background:var(--bg-input);border:1px solid var(--border-subtle);border-radius:10px;padding:16px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+        <span style="font-weight:700;color:var(--accent-purple);font-size:15px;">10/22 (四) ｜ 箴言 27:3-5</span>
+        <span style="font-size:13px;color:var(--text-dim);">愚妄人的忿怒與當面的責備</span>
+      </div>
+      <div><div class="verse-item"><span class="verse-num">3</span><span class="verse-text">石頭重，沙土沉，愚妄人的惱怒比這兩樣更重。</span></div><div class="verse-item"><span class="verse-num">4</span><span class="verse-text">忿怒為殘忍，怒氣為狂瀾，惟有嫉妒，誰能敵得住呢？</span></div><div class="verse-item"><span class="verse-num">5</span><span class="verse-text">當面的責備強如背地的愛情。</span></div></div>
+    </div>
+    
+    <div style="background:var(--bg-input);border:1px solid var(--border-subtle);border-radius:10px;padding:16px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+        <span style="font-weight:700;color:var(--accent-purple);font-size:15px;">10/23 (五) ｜ 箴言 27:6-8</span>
+        <span style="font-size:13px;color:var(--text-dim);">朋友忠誠的勸勉與離窩之鳥</span>
+      </div>
+      <div><div class="verse-item"><span class="verse-num">6</span><span class="verse-text">朋友加的傷痕出於忠誠；仇敵連連親嘴卻是多餘。</span></div><div class="verse-item"><span class="verse-num">7</span><span class="verse-text">人吃飽了，厭惡蜂房的蜜；人飢餓了，一切苦物都覺甘甜。</span></div><div class="verse-item"><span class="verse-num">8</span><span class="verse-text">人離本處飄流，好像雀鳥離窩遊飛。</span></div></div>
+    </div>
+    
+    <div style="background:var(--bg-input);border:1px solid var(--border-subtle);border-radius:10px;padding:16px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+        <span style="font-weight:700;color:var(--accent-purple);font-size:15px;">10/24 (六) ｜ 箴言 27:9-10</span>
+        <span style="font-size:13px;color:var(--text-dim);">誠摯的友誼如膏油香料，相近的鄰舍強如遠方的弟兄</span>
+      </div>
+      <div><div class="verse-item"><span class="verse-num">9</span><span class="verse-text">膏油與香料使人心喜悅；朋友誠實的勸教也是如此甘美。</span></div><div class="verse-item"><span class="verse-num">10</span><span class="verse-text">你的朋友和父親的朋友，你都不可離棄。你遭難的日子，不要上弟兄的家去；相近的鄰舍強如遠方的弟兄。</span></div></div>
+    </div>
+    
+    <div style="background:var(--bg-input);border:1px solid var(--border-subtle);border-radius:10px;padding:16px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
+        <span style="font-weight:700;color:var(--accent-purple);font-size:15px;">10/25 (日) ｜ 箴言 27:11-12</span>
+        <span style="font-size:13px;color:var(--text-dim);">作有智慧的兒女，通達人見禍藏躲</span>
+      </div>
+      <div><div class="verse-item"><span class="verse-num">11</span><span class="verse-text">我兒，你要作智慧人，好叫我的心歡喜，使我可以回答那譏誚我的人。</span></div><div class="verse-item"><span class="verse-num">12</span><span class="verse-text">通達人見禍藏躲；愚蒙人前往受害。</span></div></div>
+    </div>
+    
+  <div id="prov-raw-all" style="display:none;">箴言 26:26-28 (26) 他雖用詭詐遮掩自己的怨恨，他的邪惡必在會中顯露。\n箴言 26:26-28 (27) 挖陷坑的，自己必掉在其中；滾石頭的，石頭必反滾在他身上。\n箴言 26:26-28 (28) 虛謊的舌恨他所壓傷的人；諂媚的口敗壞人的事。\n箴言 27:1-2 (1) 不要為明日自誇，因為一日要生何事，你尚且不能知道。\n箴言 27:1-2 (2) 要別人誇獎你，不可用口自誇；等外人稱讚你，不可用嘴自稱。\n箴言 27:3-5 (3) 石頭重，沙土沉，愚妄人的惱怒比這兩樣更重。\n箴言 27:3-5 (4) 忿怒為殘忍，怒氣為狂瀾，惟有嫉妒，誰能敵得住呢？\n箴言 27:3-5 (5) 當面的責備強如背地的愛情。\n箴言 27:6-8 (6) 朋友加的傷痕出於忠誠；仇敵連連親嘴卻是多餘。\n箴言 27:6-8 (7) 人吃飽了，厭惡蜂房的蜜；人飢餓了，一切苦物都覺甘甜。\n箴言 27:6-8 (8) 人離本處飄流，好像雀鳥離窩遊飛。\n箴言 27:9-10 (9) 膏油與香料使人心喜悅；朋友誠實的勸教也是如此甘美。\n箴言 27:9-10 (10) 你的朋友和父親的朋友，你都不可離棄。你遭難的日子，不要上弟兄的家去；相近的鄰舍強如遠方的弟兄。\n箴言 27:11-12 (11) 我兒，你要作智慧人，好叫我的心歡喜，使我可以回答那譏誚我的人。\n箴言 27:11-12 (12) 通達人見禍藏躲；愚蒙人前往受害。</div>
+</section>
+
+
+    <!-- 底部回到頂端 -->
+    <div style="text-align:center;padding:30px 10px;color:var(--text-dim);font-size:13px;">
+      <a href="#" style="color:var(--gold-light);text-decoration:none;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:20px;font-size:14px;">↑ 回到頂部</a>
+      <div style="margin-top:16px;">
+        <a href="index.html" style="color:var(--gold-primary);text-decoration:none;">💡 開啟本週小組分享指引與逐字稿 ➔</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">已複製</div>
+  <script>
+function copyText(elementId, btn) {
+  const target = document.getElementById(elementId);
+  if (!target) return;
+  const text = target.innerText || target.textContent;
+  
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('✅ 已成功複製到剪貼簿！');
+    if (btn) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✓ 已複製';
+      btn.style.background = 'var(--gold-primary)';
+      btn.style.color = '#070d16';
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 2000);
+    }
+  }).catch(err => {
+    console.error('Copy failed:', err);
+    // Fallback
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showToast('✅ 已複製（相容模式）！');
+  });
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+  toast.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2200);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旌旗小組讀經分享指引｜列王紀上 3～9 章</title>
+  <style>
+:root {
+  --bg-primary: #070d16;
+  --bg-card: #0e1826;
+  --bg-card-hover: #132034;
+  --bg-input: #0a121e;
+  --border-color: rgba(212, 175, 55, 0.22);
+  --border-subtle: #1c2b42;
+  --gold-primary: #d4af37;
+  --gold-light: #f5d77f;
+  --gold-dark: #aa8620;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --accent-cyan: #38bdf8;
+  --accent-emerald: #34d399;
+  --accent-purple: #c084fc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.7;
+  padding: 24px 16px 80px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 32px 20px;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(14, 24, 38, 0.8) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.badge-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.badge-cyan {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-emerald {
+  background: rgba(52, 211, 153, 0.12);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+h1 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-btn-primary {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+  color: #070d16;
+  border: none;
+}
+
+.nav-btn-primary:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.nav-btn-secondary {
+  background: var(--bg-card);
+  color: var(--gold-light);
+  border: 1px solid var(--border-color);
+}
+
+.nav-btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-primary);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.card-title .icon {
+  font-size: 20px;
+}
+
+.copy-container {
+  margin-top: 14px;
+}
+
+.copy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.copy-label {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-light);
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-copy:hover {
+  background: var(--gold-primary);
+  color: #070d16;
+}
+
+.copy-box {
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 16px;
+  color: #e2e8f0;
+  font-size: 14.5px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: text;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--border-subtle);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timeline-date {
+  min-width: 95px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  padding-top: 2px;
+}
+
+.timeline-body h4 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.timeline-body p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.tag-proverb {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(192, 132, 252, 0.12);
+  color: var(--accent-purple);
+  margin-top: 6px;
+}
+
+.highlight-box {
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 4px solid var(--gold-primary);
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+  font-size: 14.5px;
+}
+
+.quote-verse {
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.verse-item {
+  display: flex;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 15px;
+  line-height: 1.8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.verse-num {
+  min-width: 32px;
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 13px;
+  text-align: right;
+  padding-top: 1px;
+}
+
+.verse-text {
+  color: #e2e8f0;
+  flex: 1;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--gold-primary);
+  color: #070d16;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: 9999;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  background: rgba(14, 24, 38, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nav-chip {
+  padding: 6px 12px;
+  background: var(--bg-primary);
+  color: var(--text-muted);
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.2s;
+}
+
+.nav-chip:hover, .nav-chip.active {
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--gold-light);
+  border-color: var(--gold-primary);
+}
+
+@media (max-width: 600px) {
+  body { padding: 16px 12px 60px; }
+  h1 { font-size: 22px; }
+  .card { padding: 18px 14px; }
+  .timeline-item { flex-direction: column; gap: 4px; }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-row">
+        <span class="badge badge-gold">✦ 台中旌旗教會小組聚會專用</span>
+        <span class="badge badge-cyan">聖經旅行團・三年讀經之旅</span>
+        <span class="badge badge-emerald">2026/10/19 ～ 2026/10/25 進度</span>
+      </div>
+      <h1>【在榮耀的高峰，持守聽從神的心】</h1>
+      <p class="subtitle">列王紀上 3～9 章內容摘要・默想箴言・小組分享帶領手冊與發言稿</p>
+      
+      <div class="nav-links">
+        <a href="#quick-summary" class="nav-btn nav-btn-secondary">📖 本週進度摘要</a>
+        <a href="#sharing-framework" class="nav-btn nav-btn-secondary">💡 建議分享架構</a>
+        <a href="#copy-speech" class="nav-btn nav-btn-primary">📋 一鍵複製 3 分鐘講稿</a>
+        <a href="#smallgroup-qa" class="nav-btn nav-btn-secondary">💬 小組討論題目</a>
+        <a href="scripture.html" class="nav-btn nav-btn-secondary" style="border-color:var(--accent-cyan);color:var(--accent-cyan);">📜 開啟完整經文檔 ↗</a>
+      </div>
+    </header>
+
+    <!-- 0. 本週總攬重點 -->
+    <section class="card" id="quick-summary">
+      <div class="card-title">
+        <span class="icon">🏛️</span>
+        <span>本週進度大綱與核心脈絡（列王紀上 3～9 章）</span>
+      </div>
+      <p style="color:var(--text-muted);margin-bottom:18px;">
+        本週進度記錄了以色列國度史上最燦爛奪目的「所羅門黃金時代」。從基遍求智慧、籌劃建殿、聖殿完工獻殿，到上帝榮耀降臨與二次顯現立約。這七章經文不僅是宏偉的歷史建造，更是一面屬靈的鏡子——<strong>「上帝看重我們為祂建的殿宇，但上帝更在乎我們是否有一顆真實聽從順服的心。」</strong>
+      </p>
+
+      <div class="timeline-item">
+        <div class="timeline-date">10/19 (一)<br>王上第 3 章</div>
+        <div class="timeline-body">
+          <h4>【智慧的起點：聆聽的心】所羅門在基遍求智慧、兩妓爭子之審判</h4>
+          <p>所羅門向神承認自己「幼小不知出入」，單求「能聽的心（聽訟的智慧）」以判斷神子民。神因他不求壽、富、仇敵之命而大悅，賜下超凡智慧，並連同尊榮富足一同賜予。隨後以兩妓奪子之案展現神授的洞察力。</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">10/20 (二)<br>王上第 4 章</div>
+        <div class="timeline-body">
+          <h4>【榮耀盛世與寬廣的心】十二行政區劃分與萬王慕名聆聽</h4>
+          <p>以色列民如海沙繁多，在自己的葡萄樹與無花果樹下安然居住。所羅門作箴言三千句、詩歌一千零五首，通曉草木蟲魚，神賜他「極大的智慧聰明和萬人敬仰廣大的心」。</p>
+          <span class="tag-proverb">箴言默想 26:26-28：除掉心中詭詐諂媚，持守清潔真實言語</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">10/21 (三)<br>王上第 5 章</div>
+        <div class="timeline-body">
+          <h4>【合一同工：建殿預備】與推羅王希蘭立約，預備黎巴嫩香柏木與巨石</h4>
+          <p>神賜四境平安，無仇敵災禍。所羅門定意為神建殿，與推羅王希蘭結盟互通有無，調派數萬工匠在山中採鑿修整巨大貴重的石頭作為殿的根基。</p>
+          <span class="tag-proverb">箴言默想 27:1-2：不要為明日自誇，自誇是愚妄；由別人稱讚你</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">10/22 (四)<br>王上第 6 章</div>
+        <div class="timeline-body">
+          <h4>【聖殿動工與神親自插話】出埃及 480 年動工，歷經 7 年峻工</h4>
+          <p>聖殿內部全貼滿精金，雕刻基路伯與盛開的花朵。建殿時「聽不見鐵器之聲」（莊嚴神聖）。建殿正熱烈時，神親自向所羅門重申條件：<strong>「你若遵行我的律例...我必住在以色列人中間，並不丟棄我的百姓。」</strong></p>
+          <span class="tag-proverb">箴言默想 27:3-5：忿怒為殘忍，嫉妒誰能敵；當面的責備強如背地的愛情</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">10/23 (五)<br>王上第 7 章</div>
+        <div class="timeline-body">
+          <h4>【王宮建造與銅匠戶蘭】雅斤與波阿斯、銅海與侍奉器皿</h4>
+          <p>所羅門建王宮（13年）。推羅銅匠戶蘭以精湛智慧鑄造聖殿廊前兩大銅柱：<strong>「雅斤（祂必建立）」</strong>與<strong>「波阿斯（在祂有力量）」</strong>，並造巨大銅海與十個銅車，確立聖殿的威嚴侍奉。</p>
+          <span class="tag-proverb">箴言默想 27:6-8：朋友加的傷痕出於忠誠；離鄉漂流如離窩之鳥</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">10/24 (六)<br>王上第 8 章</div>
+        <div class="timeline-body">
+          <h4>【榮耀的高峰：獻殿之禱】約櫃入殿、雲彩充滿、所羅門跪地舉手祈禱</h4>
+          <p>耶和華的榮光充滿聖殿，祭司不能站立供職。所羅門向萬民祝福，發出偉大禱告：承認天上的天尚不足神居住，懇求神晝夜看顧這殿，無論百姓何時戰敗、乾旱、犯罪，只要向這殿禱告，神必在天上垂聽、赦免並拯救！</p>
+          <span class="tag-proverb">箴言默想 27:9-10：膏油香料使人心喜悅，朋友誠懇相勸亦然；相近的鄰舍勝過遠方弟兄</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">10/25 (日)<br>王上第 9 章</div>
+        <div class="timeline-body">
+          <h4>【神二次顯現：守約的祝福與背約的警鐘】分別為聖與嚴厲告誡</h4>
+          <p>工程完畢後，神向所羅門二次顯現：「我的眼、我的心必常在那裡。」但也嚴正宣告：<strong>若偏離神去事奉別神，神必將這殿捨棄，使它在萬民中作笑談。</strong> 盛世背後伏下了不可懈怠的警訊。</p>
+          <span class="tag-proverb">箴言默想 27:11-12：作有智慧的兒女使父心歡喜；通達人見禍藏躲，愚蒙人前往受害</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. 建議分享方式與架構 -->
+    <section class="card" id="sharing-framework">
+      <div class="card-title">
+        <span class="icon">🎯</span>
+        <span>建議的小組分享方式與表達架構（5～7分鐘）</span>
+      </div>
+      <p style="color:var(--text-muted);margin-bottom:16px;">
+        在旌旗小組的「讀經分享」環節中，最受弟兄姊妹歡迎且容易引起共鳴的方式是<strong>「從痛點破冰 ➔ 抓一個經文亮光 ➔ 連結個人生活見證 ➔ 丟出小組討論反思」</strong>：
+      </p>
+
+      <div class="highlight-box">
+        <div class="quote-verse">📌 建議節奏控制（7分鐘黃金比例）：</div>
+        <strong>【1 分鐘 破冰引言】</strong> 用一個貼近現代人的問題引起興趣（「如果上帝說可以隨便求一個禮物...」）<br>
+        <strong>【3 分鐘 經文亮光】</strong> 點出所羅門求「聽從的心」與「雅斤、波阿斯」這兩處震撼洞察<br>
+        <strong>【2 分鐘 生活見證】</strong> 連結自己這週在工作、決策或家庭中「學習放手讓神帶領」的小體會<br>
+        <strong>【1 分鐘 提問結尾】</strong> 帶出一個能讓大家接話討論的好問題
+      </div>
+
+      <div style="margin-top:20px;">
+        <h4 style="color:var(--gold-light);margin-bottom:10px;">🌟 三個絕佳切入主題（可任選一個深挖）：</h4>
+        <ul style="padding-left:20px;color:var(--text-muted);font-size:14.5px;line-height:1.9;">
+          <li><strong>主題 A【聽從的智慧 vs 自我的小聰明】（王上 3 章）</strong>：所羅門要的不是聰明才智去贏過別人，而是能「聽懂神心意」的耳朵。現代人常向神要快速答案，但神要給的是聆聽祂的生命。</li>
+          <li><strong>主題 B【人生柱子是誰在立？雅斤與波阿斯】（王上 7 章）</strong>：聖殿前兩根大銅柱的名字告訴我們：一切基業是「神必建立（雅斤）」、成就的力量是「在祂有力量（波阿斯）」。不要用血氣拼命硬扛。</li>
+          <li><strong>主題 C【成功的最大危險：忘記神】（王上 6:11-12 & 9:4-9）</strong>：建殿是好事，所羅門花了20年建殿與王宮，但神兩次打斷他，提醒他：神住的不是金子做的建築，而是住在一個順服聽話的生命裡。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. 一鍵複製發言稿 -->
+    <section class="card" id="copy-speech">
+      <div class="card-title">
+        <span class="icon">🎙️</span>
+        <span>【直接可用】3～5 分鐘小組個人分享講稿（逐字稿）</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;margin-bottom:12px;">
+        此發言稿文字自然、口語化且兼具屬靈深度，可直接拿在手機上一鍵複製，直接在小組聚會中脫稿或照唸分享：
+      </p>
+
+      <div class="copy-container">
+        <div class="copy-header">
+          <span class="copy-label">📱 適合在小組中口頭分享的逐字稿</span>
+          <button class="btn-copy" onclick="copyText('speech-text', this)">📋 一鍵複製發言稿</button>
+        </div>
+        <div class="copy-box" id="speech-text">各位弟兄姊妹平安！
+
+這週我跟著教會「聖經旅行團」讀到列王紀上 3 到 9 章，看著所羅門從登基、建殿到獻殿的過程，心裡有非常大的觸動與提醒。
+
+讀到第 3 章時，我問自己一個問題：「如果今天上帝在夢中對我說：『你向我求什麼我都賜給你』，我的第一反應會是什麼？」
+
+老實說，以我們現代人的焦慮，很容易立刻求業績達標、求小孩聽話、求健康平安、求財務自由。但所羅門面對如此浩大的國度，他向神求的竟然只有一件事情——他求神賜給他「能聽的心（聽訟的智慧）」。
+
+他不是求神給他一本所有難題的「標準答案百科全書」，而是求自己擁有一雙「聽得懂神說話、也能聽懂百姓需要」的耳朵。這給我一個很大的光照：很多時候我們在職場或家庭裡做決策很痛苦，常常是因為我們急著用自己的小聰明想破局，卻少了一顆願意先安靜下來「聽神怎麼說」的心。
+
+另一個深深打中我的是第 7 章，所羅門為聖殿造了兩根大銅柱，分別取名叫做「雅斤」和「波阿斯」。「雅斤」的意思是「祂必建立」，「波阿斯」的意思是「在祂有力量」。
+
+這兩根柱子立在聖殿門口，等於每天都在提醒進殿的每一個人：不管你的事業有多大、你的家庭付出多少心血，如果不是神親自建立，我們靠自己的力氣硬撐，最後只會筋疲力盡；但只要把生命交在神的手裡，力量的源頭在祂，祂必然會為我們堅立。
+
+最後，在第 9 章，當所羅門建完極致奢華的聖殿與王宮後，上帝第二次向他顯現，神稱讚了他的熱心，但也給了他一個非常嚴肅的警告。神說，神真正在乎的，從來不是那棟金碧輝煌的建築物，而是我們到底有沒有「存誠實正直的心遵行祂的道」。如果我們轉去拜偶像，再輝煌的殿宇也會被拋棄。
+
+這給我一個很深的提醒：我們在外面追求事業成功、忙著打拼是好的，但千萬不要在榮耀與忙碌的高峰中，漸漸把神放到了第二位。
+
+以上是這週讀經給我最深刻的亮光，也想祝福我們小組的每位家人，在這週的面對生活與工作時，都能緊緊抓住「雅斤」與「波阿斯」，靠著神得力量，做一個有「聆聽的心」的智慧人！謝謝大家。</div>
+      </div>
+    </section>
+
+    <!-- 3. 小組討論題目與聚會引導文字 -->
+    <section class="card" id="smallgroup-qa">
+      <div class="card-title">
+        <span class="icon">💬</span>
+        <span>小組討論題目（LINE 群組公告版）</span>
+      </div>
+      <p style="color:var(--text-muted);font-size:14px;margin-bottom:12px;">
+        您可以將下列文字直接複製貼到小組 LINE 群組，作為小組聚會前暖身或現場輪流分享的題目：
+      </p>
+
+      <div class="copy-container">
+        <div class="copy-header">
+          <span class="copy-label">📱 LINE 群組討論與破冰引導文字</span>
+          <button class="btn-copy" onclick="copyText('line-text', this)">📋 一鍵複製 LINE 題目</button>
+        </div>
+        <div class="copy-box" id="line-text">🌿【本週旌旗小組讀經分享題目｜聖經旅行團】🌿
+📖 讀經範圍：列王紀上 3～9 章 ＆ 箴言 26:26～27:12
+✨ 主題：在榮耀的高峰，持守聽從神的心
+
+親愛的小組家人平安！
+本週我們讀完所羅門極致輝煌的建殿歷史，在聚會中我們將聚焦以下三個生活反思題，歡迎大家選一題預備分享：
+
+1.【生活求問題】所羅門在基遍不求富貴壽數，單求「能聽的心（聽訟的智慧）」。在近期忙碌的工作、家庭或個人決策中，你覺得自己最需要向神求什麼樣的「智慧」或「指引」？
+
+2.【信心交託題】聖殿門口立著兩根銅柱：「雅斤（神必建立）」與「波阿斯（神有力量）」。在你看似掌控很多或正面臨壓力的領域裡，有哪些事情是你需要放手、宣告讓神來建立與加添力量的？
+
+3.【箴言生活題】箴言 27:1 提醒我們：「不要為明日自誇，因為一日要生何事，你尚且不能知道。」這節經文在面對未來的焦慮、計畫或人際相處時，帶給你什麼樣的平安或提醒？
+
+期待小組聚會中聽見大家的生命見證與亮光！願神的話成為我們腳前的燈、路上的光 ✨</div>
+      </div>
+    </section>
+
+    <!-- 底部導覽與版權 -->
+    <div style="text-align:center;padding:24px;color:var(--text-dim);font-size:13px;">
+      旌旗小組靈修分享專用・聖經旅行團 2026/10/19～10/25 進度彙整<br>
+      <a href="scripture.html" style="color:var(--gold-primary);text-decoration:none;margin-top:6px;display:inline-block;">查看全卷經文檔（列王紀上 3～9 章與箴言全文） ➔</a>
+    </div>
+
+  </div>
+
+  <div id="toast" class="toast">已複製</div>
+  <script>
+function copyText(elementId, btn) {
+  const target = document.getElementById(elementId);
+  if (!target) return;
+  const text = target.innerText || target.textContent;
+  
+  navigator.clipboard.writeText(text).then(() => {
+    showToast('✅ 已成功複製到剪貼簿！');
+    if (btn) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✓ 已複製';
+      btn.style.background = 'var(--gold-primary)';
+      btn.style.color = '#070d16';
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 2000);
+    }
+  }).catch(err => {
+    console.error('Copy failed:', err);
+    // Fallback
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    showToast('✅ 已複製（相容模式）！');
+  });
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+  toast.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2200);
+}
+</script>
+</body>
+</html>
