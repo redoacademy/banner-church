@@ -4,7 +4,7 @@
 本儲存庫旨在將教會相關的靈修、讀經進度、小組聚會與服事材料進行獨立且有系統的組織架構管理。
 
 🌐 **公開線上閱讀網站（GitHub Pages）**：  
-👉 [https://danieloean.github.io/banner-church/](https://danieloean.github.io/banner-church/)
+👉 [https://bigjuian.github.io/banner-church/](https://bigjuian.github.io/banner-church/)
 
 ---
 
@@ -41,5 +41,5 @@ banner-church/
 
 ## 📱 傳給小組員之建議短網址
 
-- **永遠最新進度**：`https://danieloean.github.io/banner-church/current/`
-- **全站導航中樞**：`https://danieloean.github.io/banner-church/`
+- **永遠最新進度**：`https://bigjuian.github.io/banner-church/current/`
+- **全站導航中樞**：`https://bigjuian.github.io/banner-church/`
